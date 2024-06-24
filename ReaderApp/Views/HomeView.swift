@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct homeView: View {
-    @ObservedObject var viewAdapter: HomeViewAdapter
+struct HomeView: View {
+    @StateObject var viewAdapter = HomeViewAdapter()
     @State var showSideMenu = false
     
     var body: some View {
@@ -113,5 +113,5 @@ struct homeView: View {
 
 
 #Preview {
-    homeView(viewAdapter: HomeViewAdapter(currentIndex: (0, 0)))
+    HomeView(viewAdapter: HomeViewAdapter(currentIndex: (0, 0)))
 }

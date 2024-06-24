@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBnj4-HuU3zLfMcNzhZo6MQN-ty1u8sIsk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>658121813559</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.rhiz0m.ReaderApp</string>
+	<key>PROJECT_ID</key>
+	<string>readerapp-604d4</string>
+	<key>STORAGE_BUCKET</key>
+	<string>readerapp-604d4.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:658121813559:ios:c0f70822556602bff559b2</string>
+</dict>
+</plist>

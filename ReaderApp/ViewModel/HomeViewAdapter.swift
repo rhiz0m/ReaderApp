@@ -10,7 +10,7 @@ import Combine
 
 class HomeViewAdapter: ObservableObject, CurrentIndex {
     
-    @Published var viewModel: homeView.ViewModel?
+    @Published var viewModel: HomeView.ViewModel?
     @Published var usersText: UsersTexts
     @Published var gridItemState: GridItemState
     @Published var splitValues: SplitValues
@@ -35,7 +35,7 @@ class HomeViewAdapter: ObservableObject, CurrentIndex {
         )
     }()
     
-    init(viewModel: homeView.ViewModel? = nil,
+    init(viewModel: HomeView.ViewModel? = nil,
          sliderValue: Double = 1.0,
          timer: Timer? = nil,
          currentIndex: (Int, Int)? = nil) {
