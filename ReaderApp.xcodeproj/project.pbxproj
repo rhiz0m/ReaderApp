@@ -7,8 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FEDDF8982C2738030001ADD8 /* ReaderAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDDF8972C2738030001ADD8 /* ReaderAppApp.swift */; };
-		FEDDF89A2C2738030001ADD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDDF8992C2738030001ADD8 /* ContentView.swift */; };
+		FE6F22E62C297B9100638FE2 /* HomeViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22E42C297B9100638FE2 /* HomeViewAdapter.swift */; };
+		FE6F22E72C297B9100638FE2 /* AuthViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22E52C297B9100638FE2 /* AuthViewAdapter.swift */; };
+		FE6F22EE2C297BCD00638FE2 /* SplitValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22E82C297BCD00638FE2 /* SplitValues.swift */; };
+		FE6F22EF2C297BCD00638FE2 /* SystemIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22E92C297BCD00638FE2 /* SystemIcons.swift */; };
+		FE6F22F02C297BCD00638FE2 /* TextState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22EA2C297BCD00638FE2 /* TextState.swift */; };
+		FE6F22F12C297BCD00638FE2 /* ReaderVelocity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22EB2C297BCD00638FE2 /* ReaderVelocity.swift */; };
+		FE6F22F22C297BCD00638FE2 /* GridItemState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22EC2C297BCD00638FE2 /* GridItemState.swift */; };
+		FE6F22F32C297BCD00638FE2 /* UsersTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22ED2C297BCD00638FE2 /* UsersTexts.swift */; };
+		FE6F22F72C297C1900638FE2 /* CurrentIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22F62C297C1900638FE2 /* CurrentIndex.swift */; };
+		FE6F23002C297C2D00638FE2 /* WhereTheWildThingsAre.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22F82C297C2D00638FE2 /* WhereTheWildThingsAre.swift */; };
+		FE6F23012C297C2D00638FE2 /* Mathilda.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22F92C297C2D00638FE2 /* Mathilda.swift */; };
+		FE6F23022C297C2D00638FE2 /* TheHobbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22FA2C297C2D00638FE2 /* TheHobbit.swift */; };
+		FE6F23032C297C2D00638FE2 /* NineteenEightyFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22FB2C297C2D00638FE2 /* NineteenEightyFour.swift */; };
+		FE6F23042C297C2D00638FE2 /* HarryPotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22FC2C297C2D00638FE2 /* HarryPotter.swift */; };
+		FE6F23052C297C2D00638FE2 /* ThePhenomenologyOfMind.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22FD2C297C2D00638FE2 /* ThePhenomenologyOfMind.swift */; };
+		FE6F23062C297C2D00638FE2 /* TheMetamorphosis.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22FE2C297C2D00638FE2 /* TheMetamorphosis.swift */; };
+		FE6F23072C297C2D00638FE2 /* RemembranceOfThingsPast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22FF2C297C2D00638FE2 /* RemembranceOfThingsPast.swift */; };
+		FE6F230A2C297C5800638FE2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23082C297C5800638FE2 /* Theme.swift */; };
+		FE6F230B2C297C5800638FE2 /* GridPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23092C297C5800638FE2 /* GridPoints.swift */; };
+		FE6F230E2C297C7300638FE2 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F230D2C297C7300638FE2 /* Array.swift */; };
+		FE6F23102C297CAD00638FE2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F230F2C297CAD00638FE2 /* HomeView.swift */; };
+		FE6F23132C297D0C00638FE2 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23122C297D0C00638FE2 /* SideMenuView.swift */; };
+		FE6F23182C297D3900638FE2 /* CardStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23152C297D3900638FE2 /* CardStyling.swift */; };
+		FE6F23192C297D3900638FE2 /* TextFeildStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23162C297D3900638FE2 /* TextFeildStyling.swift */; };
+		FE6F231A2C297D3900638FE2 /* BtnSectionStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23172C297D3900638FE2 /* BtnSectionStyling.swift */; };
+		FE6F23262C297DA600638FE2 /* GridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F231E2C297DA600638FE2 /* GridItem.swift */; };
+		FE6F23272C297DA600638FE2 /* ProcentageStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F231F2C297DA600638FE2 /* ProcentageStack.swift */; };
+		FE6F23282C297DA600638FE2 /* BtnSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23202C297DA600638FE2 /* BtnSection.swift */; };
+		FE6F23292C297DA600638FE2 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23212C297DA600638FE2 /* GridView.swift */; };
+		FE6F232B2C297DA600638FE2 /* UserTextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23232C297DA600638FE2 /* UserTextArea.swift */; };
+		FE6F232C2C297DA600638FE2 /* CircleBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23242C297DA600638FE2 /* CircleBtn.swift */; };
+		FE6F232D2C297DA600638FE2 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23252C297DA600638FE2 /* Icons.swift */; };
+		FE6F23312C297DEC00638FE2 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F232F2C297DEC00638FE2 /* EmailView.swift */; };
+		FE6F23322C297DEC00638FE2 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23302C297DEC00638FE2 /* PasswordView.swift */; };
+		FE6F23372C297E0E00638FE2 /* FlipBackBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23342C297E0E00638FE2 /* FlipBackBtn.swift */; };
+		FE6F23382C297E0E00638FE2 /* UnSelectBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23352C297E0E00638FE2 /* UnSelectBtn.swift */; };
+		FE6F23392C297E0E00638FE2 /* FlipBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23362C297E0E00638FE2 /* FlipBtn.swift */; };
+		FE6F233D2C2982FC00638FE2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F233B2C2982FC00638FE2 /* LoginView.swift */; };
+		FE6F233E2C2982FC00638FE2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F233C2C2982FC00638FE2 /* SignUpView.swift */; };
+		FEDDF8982C2738030001ADD8 /* ReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDDF8972C2738030001ADD8 /* ReaderApp.swift */; };
 		FEDDF89C2C2738040001ADD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEDDF89B2C2738040001ADD8 /* Assets.xcassets */; };
 		FEDDF89F2C2738040001ADD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEDDF89E2C2738040001ADD8 /* Preview Assets.xcassets */; };
 		FEDDF8A92C2738040001ADD8 /* ReaderAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDDF8A82C2738040001ADD8 /* ReaderAppTests.swift */; };
@@ -34,9 +72,48 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE6F22E42C297B9100638FE2 /* HomeViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewAdapter.swift; sourceTree = "<group>"; };
+		FE6F22E52C297B9100638FE2 /* AuthViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewAdapter.swift; sourceTree = "<group>"; };
+		FE6F22E82C297BCD00638FE2 /* SplitValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitValues.swift; sourceTree = "<group>"; };
+		FE6F22E92C297BCD00638FE2 /* SystemIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemIcons.swift; sourceTree = "<group>"; };
+		FE6F22EA2C297BCD00638FE2 /* TextState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextState.swift; sourceTree = "<group>"; };
+		FE6F22EB2C297BCD00638FE2 /* ReaderVelocity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderVelocity.swift; sourceTree = "<group>"; };
+		FE6F22EC2C297BCD00638FE2 /* GridItemState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridItemState.swift; sourceTree = "<group>"; };
+		FE6F22ED2C297BCD00638FE2 /* UsersTexts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTexts.swift; sourceTree = "<group>"; };
+		FE6F22F62C297C1900638FE2 /* CurrentIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentIndex.swift; sourceTree = "<group>"; };
+		FE6F22F82C297C2D00638FE2 /* WhereTheWildThingsAre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhereTheWildThingsAre.swift; sourceTree = "<group>"; };
+		FE6F22F92C297C2D00638FE2 /* Mathilda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mathilda.swift; sourceTree = "<group>"; };
+		FE6F22FA2C297C2D00638FE2 /* TheHobbit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheHobbit.swift; sourceTree = "<group>"; };
+		FE6F22FB2C297C2D00638FE2 /* NineteenEightyFour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NineteenEightyFour.swift; sourceTree = "<group>"; };
+		FE6F22FC2C297C2D00638FE2 /* HarryPotter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HarryPotter.swift; sourceTree = "<group>"; };
+		FE6F22FD2C297C2D00638FE2 /* ThePhenomenologyOfMind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThePhenomenologyOfMind.swift; sourceTree = "<group>"; };
+		FE6F22FE2C297C2D00638FE2 /* TheMetamorphosis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheMetamorphosis.swift; sourceTree = "<group>"; };
+		FE6F22FF2C297C2D00638FE2 /* RemembranceOfThingsPast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemembranceOfThingsPast.swift; sourceTree = "<group>"; };
+		FE6F23082C297C5800638FE2 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		FE6F23092C297C5800638FE2 /* GridPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridPoints.swift; sourceTree = "<group>"; };
+		FE6F230D2C297C7300638FE2 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		FE6F230F2C297CAD00638FE2 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FE6F23122C297D0C00638FE2 /* SideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		FE6F23152C297D3900638FE2 /* CardStyling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStyling.swift; sourceTree = "<group>"; };
+		FE6F23162C297D3900638FE2 /* TextFeildStyling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFeildStyling.swift; sourceTree = "<group>"; };
+		FE6F23172C297D3900638FE2 /* BtnSectionStyling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtnSectionStyling.swift; sourceTree = "<group>"; };
+		FE6F231C2C297D7000638FE2 /* PermanentMarker-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PermanentMarker-Regular.ttf"; sourceTree = "<group>"; };
+		FE6F231E2C297DA600638FE2 /* GridItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridItem.swift; sourceTree = "<group>"; };
+		FE6F231F2C297DA600638FE2 /* ProcentageStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcentageStack.swift; sourceTree = "<group>"; };
+		FE6F23202C297DA600638FE2 /* BtnSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtnSection.swift; sourceTree = "<group>"; };
+		FE6F23212C297DA600638FE2 /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		FE6F23232C297DA600638FE2 /* UserTextArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTextArea.swift; sourceTree = "<group>"; };
+		FE6F23242C297DA600638FE2 /* CircleBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleBtn.swift; sourceTree = "<group>"; };
+		FE6F23252C297DA600638FE2 /* Icons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		FE6F232F2C297DEC00638FE2 /* EmailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
+		FE6F23302C297DEC00638FE2 /* PasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
+		FE6F23342C297E0E00638FE2 /* FlipBackBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipBackBtn.swift; sourceTree = "<group>"; };
+		FE6F23352C297E0E00638FE2 /* UnSelectBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnSelectBtn.swift; sourceTree = "<group>"; };
+		FE6F23362C297E0E00638FE2 /* FlipBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipBtn.swift; sourceTree = "<group>"; };
+		FE6F233B2C2982FC00638FE2 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FE6F233C2C2982FC00638FE2 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		FEDDF8942C2738030001ADD8 /* ReaderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReaderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FEDDF8972C2738030001ADD8 /* ReaderAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderAppApp.swift; sourceTree = "<group>"; };
-		FEDDF8992C2738030001ADD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FEDDF8972C2738030001ADD8 /* ReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderApp.swift; sourceTree = "<group>"; };
 		FEDDF89B2C2738040001ADD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEDDF89E2C2738040001ADD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FEDDF8A42C2738040001ADD8 /* ReaderAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReaderAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +148,154 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE6F22E02C2979E600638FE2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE6F22F52C297C0200638FE2 /* Protocols */,
+				FE6F22F42C297BF100638FE2 /* DummyTexts */,
+				FE6F22EC2C297BCD00638FE2 /* GridItemState.swift */,
+				FE6F22EB2C297BCD00638FE2 /* ReaderVelocity.swift */,
+				FE6F22E82C297BCD00638FE2 /* SplitValues.swift */,
+				FE6F22E92C297BCD00638FE2 /* SystemIcons.swift */,
+				FE6F22EA2C297BCD00638FE2 /* TextState.swift */,
+				FE6F22ED2C297BCD00638FE2 /* UsersTexts.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE6F22E12C2979ED00638FE2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE6F22E52C297B9100638FE2 /* AuthViewAdapter.swift */,
+				FE6F22E42C297B9100638FE2 /* HomeViewAdapter.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FE6F22E22C297A3500638FE2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FE6F233A2C2982ED00638FE2 /* Auth */,
+				FE6F231D2C297D9100638FE2 /* Components */,
+				FE6F231B2C297D5D00638FE2 /* Fonts */,
+				FE6F23142C297D1400638FE2 /* Modifiers */,
+				FE6F23112C297CFE00638FE2 /* SubViews */,
+				FE6F230F2C297CAD00638FE2 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FE6F22E32C297B7500638FE2 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				FE6F230C2C297C6400638FE2 /* Extensions */,
+				FE6F23092C297C5800638FE2 /* GridPoints.swift */,
+				FE6F23082C297C5800638FE2 /* Theme.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		FE6F22F42C297BF100638FE2 /* DummyTexts */ = {
+			isa = PBXGroup;
+			children = (
+				FE6F22FC2C297C2D00638FE2 /* HarryPotter.swift */,
+				FE6F22F92C297C2D00638FE2 /* Mathilda.swift */,
+				FE6F22FB2C297C2D00638FE2 /* NineteenEightyFour.swift */,
+				FE6F22FF2C297C2D00638FE2 /* RemembranceOfThingsPast.swift */,
+				FE6F22FA2C297C2D00638FE2 /* TheHobbit.swift */,
+				FE6F22FE2C297C2D00638FE2 /* TheMetamorphosis.swift */,
+				FE6F22FD2C297C2D00638FE2 /* ThePhenomenologyOfMind.swift */,
+				FE6F22F82C297C2D00638FE2 /* WhereTheWildThingsAre.swift */,
+			);
+			path = DummyTexts;
+			sourceTree = "<group>";
+		};
+		FE6F22F52C297C0200638FE2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FE6F22F62C297C1900638FE2 /* CurrentIndex.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FE6F230C2C297C6400638FE2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FE6F230D2C297C7300638FE2 /* Array.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FE6F23112C297CFE00638FE2 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				FE6F23122C297D0C00638FE2 /* SideMenuView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		FE6F23142C297D1400638FE2 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				FE6F23172C297D3900638FE2 /* BtnSectionStyling.swift */,
+				FE6F23152C297D3900638FE2 /* CardStyling.swift */,
+				FE6F23162C297D3900638FE2 /* TextFeildStyling.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		FE6F231B2C297D5D00638FE2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FE6F231C2C297D7000638FE2 /* PermanentMarker-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FE6F231D2C297D9100638FE2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FE6F23332C297E0100638FE2 /* Buttons */,
+				FE6F232E2C297DDF00638FE2 /* Auth */,
+				FE6F23202C297DA600638FE2 /* BtnSection.swift */,
+				FE6F23242C297DA600638FE2 /* CircleBtn.swift */,
+				FE6F231E2C297DA600638FE2 /* GridItem.swift */,
+				FE6F23212C297DA600638FE2 /* GridView.swift */,
+				FE6F23252C297DA600638FE2 /* Icons.swift */,
+				FE6F231F2C297DA600638FE2 /* ProcentageStack.swift */,
+				FE6F23232C297DA600638FE2 /* UserTextArea.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FE6F232E2C297DDF00638FE2 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FE6F232F2C297DEC00638FE2 /* EmailView.swift */,
+				FE6F23302C297DEC00638FE2 /* PasswordView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		FE6F23332C297E0100638FE2 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				FE6F23342C297E0E00638FE2 /* FlipBackBtn.swift */,
+				FE6F23362C297E0E00638FE2 /* FlipBtn.swift */,
+				FE6F23352C297E0E00638FE2 /* UnSelectBtn.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		FE6F233A2C2982ED00638FE2 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FE6F233B2C2982FC00638FE2 /* LoginView.swift */,
+				FE6F233C2C2982FC00638FE2 /* SignUpView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		FEDDF88B2C2738030001ADD8 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +319,11 @@
 		FEDDF8962C2738030001ADD8 /* ReaderApp */ = {
 			isa = PBXGroup;
 			children = (
-				FEDDF8972C2738030001ADD8 /* ReaderAppApp.swift */,
-				FEDDF8992C2738030001ADD8 /* ContentView.swift */,
+				FE6F22E32C297B7500638FE2 /* Utility */,
+				FE6F22E22C297A3500638FE2 /* Views */,
+				FE6F22E12C2979ED00638FE2 /* ViewModel */,
+				FE6F22E02C2979E600638FE2 /* Model */,
+				FEDDF8972C2738030001ADD8 /* ReaderApp.swift */,
 				FEDDF89B2C2738040001ADD8 /* Assets.xcassets */,
 				FEDDF89D2C2738040001ADD8 /* Preview Content */,
 			);
@@ -257,8 +485,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEDDF89A2C2738030001ADD8 /* ContentView.swift in Sources */,
-				FEDDF8982C2738030001ADD8 /* ReaderAppApp.swift in Sources */,
+				FE6F232B2C297DA600638FE2 /* UserTextArea.swift in Sources */,
+				FE6F23042C297C2D00638FE2 /* HarryPotter.swift in Sources */,
+				FE6F23062C297C2D00638FE2 /* TheMetamorphosis.swift in Sources */,
+				FE6F22F32C297BCD00638FE2 /* UsersTexts.swift in Sources */,
+				FE6F23032C297C2D00638FE2 /* NineteenEightyFour.swift in Sources */,
+				FE6F22F12C297BCD00638FE2 /* ReaderVelocity.swift in Sources */,
+				FE6F23382C297E0E00638FE2 /* UnSelectBtn.swift in Sources */,
+				FE6F23372C297E0E00638FE2 /* FlipBackBtn.swift in Sources */,
+				FE6F23002C297C2D00638FE2 /* WhereTheWildThingsAre.swift in Sources */,
+				FE6F23052C297C2D00638FE2 /* ThePhenomenologyOfMind.swift in Sources */,
+				FE6F23192C297D3900638FE2 /* TextFeildStyling.swift in Sources */,
+				FE6F22EF2C297BCD00638FE2 /* SystemIcons.swift in Sources */,
+				FE6F23262C297DA600638FE2 /* GridItem.swift in Sources */,
+				FEDDF8982C2738030001ADD8 /* ReaderApp.swift in Sources */,
+				FE6F23072C297C2D00638FE2 /* RemembranceOfThingsPast.swift in Sources */,
+				FE6F231A2C297D3900638FE2 /* BtnSectionStyling.swift in Sources */,
+				FE6F230B2C297C5800638FE2 /* GridPoints.swift in Sources */,
+				FE6F233E2C2982FC00638FE2 /* SignUpView.swift in Sources */,
+				FE6F22F22C297BCD00638FE2 /* GridItemState.swift in Sources */,
+				FE6F23022C297C2D00638FE2 /* TheHobbit.swift in Sources */,
+				FE6F22F72C297C1900638FE2 /* CurrentIndex.swift in Sources */,
+				FE6F23012C297C2D00638FE2 /* Mathilda.swift in Sources */,
+				FE6F22E72C297B9100638FE2 /* AuthViewAdapter.swift in Sources */,
+				FE6F23272C297DA600638FE2 /* ProcentageStack.swift in Sources */,
+				FE6F23182C297D3900638FE2 /* CardStyling.swift in Sources */,
+				FE6F230E2C297C7300638FE2 /* Array.swift in Sources */,
+				FE6F23132C297D0C00638FE2 /* SideMenuView.swift in Sources */,
+				FE6F23292C297DA600638FE2 /* GridView.swift in Sources */,
+				FE6F22EE2C297BCD00638FE2 /* SplitValues.swift in Sources */,
+				FE6F232D2C297DA600638FE2 /* Icons.swift in Sources */,
+				FE6F23392C297E0E00638FE2 /* FlipBtn.swift in Sources */,
+				FE6F23312C297DEC00638FE2 /* EmailView.swift in Sources */,
+				FE6F23322C297DEC00638FE2 /* PasswordView.swift in Sources */,
+				FE6F230A2C297C5800638FE2 /* Theme.swift in Sources */,
+				FE6F23282C297DA600638FE2 /* BtnSection.swift in Sources */,
+				FE6F22F02C297BCD00638FE2 /* TextState.swift in Sources */,
+				FE6F23102C297CAD00638FE2 /* HomeView.swift in Sources */,
+				FE6F232C2C297DA600638FE2 /* CircleBtn.swift in Sources */,
+				FE6F233D2C2982FC00638FE2 /* LoginView.swift in Sources */,
+				FE6F22E62C297B9100638FE2 /* HomeViewAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
