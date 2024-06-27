@@ -11,7 +11,7 @@ import FirebaseAuth
 import Firebase
 
 class AuthViewAdapter: ObservableObject {
-    @Published var coordinator: Coordinator
+//    @Published var coordinator: Coordinator
     @Published var loginViewModel: LoginView.ViewModel?
     @Published var registerViewModel: RegisterView.ViewModel?
     @Published var emailInput: String
@@ -26,8 +26,8 @@ class AuthViewAdapter: ObservableObject {
     private var dbListener: ListenerRegistration?
     
 
-    init(coordinator: Coordinator, emailInput: String = "", passwordInput: String = "") {
-        self.coordinator = coordinator
+    init(/*coordinator: Coordinator, */emailInput: String = "", passwordInput: String = "") {
+//        self.coordinator = coordinator
         self.emailInput = emailInput
         self.passwordInput = passwordInput
         self.setupAuthStateListener()
@@ -86,7 +86,7 @@ class AuthViewAdapter: ObservableObject {
         let loginViewModel = LoginView.ViewModel(
             appTitle: "Read Speedster",
             loginLabel: "Login",
-            signUpLabel: "Sign Up",
+            registerLabel: "Sign Up",
             passwordLabel: "Password",
             emailLabel: "Email",
             loginAction: { [weak self] completion in
@@ -113,7 +113,7 @@ class AuthViewAdapter: ObservableObject {
         }
     }
     
-    func generateSignUpViewModel() {
+    func generateRegisterViewModel() {
         let signUpViewModel = RegisterView.ViewModel(
             appTitle: "Reader App",
             cancelTitle: "Cancel",

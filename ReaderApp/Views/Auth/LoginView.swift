@@ -9,17 +9,21 @@ import SwiftUI
 
 struct LoginView: View {
     @ObservedObject var authViewAdapter: AuthViewAdapter
+    @EnvironmentObject var coordinator: Coordinator
     @State private var loggedIn = false
     
     var body: some View {
         if let viewModel = authViewAdapter.loginViewModel {
             content(viewModel: viewModel)
                 .background(
-                    NavigationLink(
-                        destination: HomeView(authViewAdapter: authViewAdapter), isActive: $loggedIn) {
+                    NavigationLink(value: Screens.HomeView) {
                         EmptyView()
                     }
+                        .opacity(0)
                 )
+                .onChange(of: loggedIn) {
+                        coordinator.push(.HomeView)
+                }
         } else {
             ProgressView()
                 .onAppear {
@@ -69,9 +73,10 @@ struct LoginView: View {
                             }
                         }
                     }
-                
-                NavigationLink(destination: RegisterView(authViewAdapter: authViewAdapter)) {
-                    Text(viewModel.signUpLabel)
+                Button(action: {
+                    coordinator.present(fullScreenCover: .RegisterView)
+                }) {
+                    Text(viewModel.registerLabel)
                 }
                 .bold()
                 .padding(.vertical, GridPoints.x1)
@@ -110,7 +115,7 @@ struct LoginView: View {
     struct ViewModel {
         let appTitle: String
         let loginLabel: String
-        let signUpLabel: String
+        let registerLabel: String
         let passwordLabel: String
         let emailLabel: String
         let loginAction: (@escaping (Bool) -> Void) -> Void
@@ -118,10 +123,5 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView(authViewAdapter: AuthViewAdapter(coordinator: Coordinator()))
+    LoginView(authViewAdapter: AuthViewAdapter())
 }
-
-//VStack {
-//    NavigationLink(destination: viewAdapter.coordinator.build(screen: .MatchDetailsView, viewAdapter: viewAdapter), label: {
-//        Text("Match Details")
-//    })

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RegisterView: View {
+    @EnvironmentObject var coordinator: Coordinator
     @ObservedObject var authViewAdapter: AuthViewAdapter
     @State var email = ""
     @State var confirmEmail = ""
@@ -17,15 +18,15 @@ struct RegisterView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        if let viewModel = authViewAdapter.registerViewModel {
-            content(viewModel: viewModel)
-            
-        } else {
-            ProgressView()
-                .onAppear(perform: {
-                    authViewAdapter.generateSignUpViewModel()
-                    
-                })
+        NavigationStack {
+            if let viewModel = authViewAdapter.registerViewModel {
+                content(viewModel: viewModel)
+            } else {
+                ProgressView()
+                    .onAppear(perform: {
+                        authViewAdapter.generateRegisterViewModel()
+                    })
+            }
         }
     }
     
@@ -58,13 +59,6 @@ struct RegisterView: View {
                 Divider()
                     .rotationEffect(Angle(degrees: -GridPoints.x1))
                 
-                NavigationLink(
-                    destination: HomeView(authViewAdapter: authViewAdapter),
-                    isActive: $newRegistration,
-                    label: { EmptyView() }
-                )
-                .hidden()
-                
                 Text(viewModel.registerTitle)
                     .font(.title2)
                     .bold()
@@ -78,6 +72,7 @@ struct RegisterView: View {
                             viewModel.registerAction(email, password) { success in
                                 if success {
                                     newRegistration = true
+                                    coordinator.dismissFullScreenCover()
                                 } else {
                                     
                                 }
@@ -136,5 +131,5 @@ struct RegisterView: View {
 }
 
 #Preview {
-    RegisterView(authViewAdapter: AuthViewAdapter(coordinator: Coordinator()))
+    RegisterView(authViewAdapter: AuthViewAdapter())
 }

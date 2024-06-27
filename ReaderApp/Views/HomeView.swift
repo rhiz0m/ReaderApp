@@ -15,6 +15,7 @@ struct HomeView: View {
     var body: some View {
         if let viewModel = viewAdapter.viewModel {
             topHeader(viewModel: viewModel)
+                .navigationBarHidden(true)
             
         } else {
             ProgressView()
@@ -118,5 +119,5 @@ struct HomeView: View {
 
 
 #Preview {
-    HomeView(viewAdapter: HomeViewAdapter(currentIndex: (0, 0)), authViewAdapter: AuthViewAdapter(coordinator: Coordinator()))
+    HomeView(viewAdapter: HomeViewAdapter(currentIndex: (0, 0)), authViewAdapter: AuthViewAdapter())
 }
