@@ -116,12 +116,6 @@ struct LoginView: View {
     }
 }
 
-//struct HomeView: View {
-//    var body: some View {
-//        Text("Welcome to Home View!")
-//    }
-//}
-
 #Preview {
     LoginView(viewAdapter: AuthViewAdapter(emailInput: "", passwordInput: ""))
 }

@@ -20,14 +20,18 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct ReaderApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var viewAdapter = AuthViewAdapter()
     
-    //@StateObject var viewAdapter = HomeViewAdapter()
-    @StateObject var viewAdapter = AuthViewAdapter(emailInput: "", passwordInput: "")
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                //homeView(viewAdapter: viewAdapter)
-                LoginView(viewAdapter: viewAdapter)
+            if let _ = viewAdapter.currentUser {
+                NavigationStack {
+                    HomeView()
+                }
+            } else {
+                NavigationStack {
+                    LoginView(viewAdapter: viewAdapter)
+                }
             }
         }
     }

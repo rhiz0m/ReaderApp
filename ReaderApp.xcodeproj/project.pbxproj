@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE63D0EA2C2D6FA9005448CF /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63D0E92C2D6FA9005448CF /* NavigationDestination.swift */; };
 		FE6F22E62C297B9100638FE2 /* HomeViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22E42C297B9100638FE2 /* HomeViewAdapter.swift */; };
 		FE6F22E72C297B9100638FE2 /* AuthViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22E52C297B9100638FE2 /* AuthViewAdapter.swift */; };
 		FE6F22EE2C297BCD00638FE2 /* SplitValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22E82C297BCD00638FE2 /* SplitValues.swift */; };
@@ -78,6 +79,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE63D0E92C2D6FA9005448CF /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
 		FE6F22E42C297B9100638FE2 /* HomeViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewAdapter.swift; sourceTree = "<group>"; };
 		FE6F22E52C297B9100638FE2 /* AuthViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewAdapter.swift; sourceTree = "<group>"; };
 		FE6F22E82C297BCD00638FE2 /* SplitValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitValues.swift; sourceTree = "<group>"; };
@@ -160,6 +162,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE63D0E82C2D6F7E005448CF /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FE63D0E92C2D6FA9005448CF /* NavigationDestination.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		FE6F22E02C2979E600638FE2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +342,7 @@
 		FEDDF8962C2738030001ADD8 /* ReaderApp */ = {
 			isa = PBXGroup;
 			children = (
+				FE63D0E82C2D6F7E005448CF /* Navigation */,
 				FE6F22E32C297B7500638FE2 /* Utility */,
 				FE6F22E22C297A3500638FE2 /* Views */,
 				FE6F22E12C2979ED00638FE2 /* ViewModel */,
@@ -531,6 +542,7 @@
 				FE6F22F22C297BCD00638FE2 /* GridItemState.swift in Sources */,
 				FE6F23022C297C2D00638FE2 /* TheHobbit.swift in Sources */,
 				FE6F22F72C297C1900638FE2 /* CurrentIndex.swift in Sources */,
+				FE63D0EA2C2D6FA9005448CF /* NavigationDestination.swift in Sources */,
 				FE6F23012C297C2D00638FE2 /* Mathilda.swift in Sources */,
 				FE6F22E72C297B9100638FE2 /* AuthViewAdapter.swift in Sources */,
 				FE6F23272C297DA600638FE2 /* ProcentageStack.swift in Sources */,

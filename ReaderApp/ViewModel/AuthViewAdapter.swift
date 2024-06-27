@@ -26,7 +26,7 @@ class AuthViewAdapter: ObservableObject {
     private var dbListener: ListenerRegistration?
     
 
-    init(emailInput: String, passwordInput: String) {
+    init(emailInput: String = "", passwordInput: String = "") {
         self.emailInput = emailInput
         self.passwordInput = passwordInput
         self.setupAuthStateListener()
