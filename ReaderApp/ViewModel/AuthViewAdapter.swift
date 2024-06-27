@@ -11,9 +11,9 @@ import FirebaseAuth
 import Firebase
 
 class AuthViewAdapter: ObservableObject {
-    
+    @Published var coordinator: Coordinator
     @Published var loginViewModel: LoginView.ViewModel?
-    @Published var signUpViewModel: SignUpView.ViewModel?
+    @Published var registerViewModel: RegisterView.ViewModel?
     @Published var emailInput: String
     @Published var passwordInput: String
     @Published var currentUserData: UserData?
@@ -26,7 +26,8 @@ class AuthViewAdapter: ObservableObject {
     private var dbListener: ListenerRegistration?
     
 
-    init(emailInput: String = "", passwordInput: String = "") {
+    init(coordinator: Coordinator, emailInput: String = "", passwordInput: String = "") {
+        self.coordinator = coordinator
         self.emailInput = emailInput
         self.passwordInput = passwordInput
         self.setupAuthStateListener()
@@ -112,22 +113,8 @@ class AuthViewAdapter: ObservableObject {
         }
     }
     
-//    func generateSignUpViewModel() {
-//        let signUpViewModel = SignUpView.ViewModel(
-//            appTitle: "Read Speedster",
-//            cancelLabel: "Cancel",
-//            signUpLabel: "Sign Up",
-//            passwordLabel: "Password",
-//            confirmPassword: "Confirm Password",
-//            emailLabel: "Email",
-//            confirmEmail: "Confirm Email"
-//        )
-//        
-//        self.signUpViewModel = signUpViewModel
-//    }
-    
     func generateSignUpViewModel() {
-        let signUpViewModel = SignUpView.ViewModel(
+        let signUpViewModel = RegisterView.ViewModel(
             appTitle: "Reader App",
             cancelTitle: "Cancel",
             registerTitle: "Sign Up",
@@ -143,7 +130,7 @@ class AuthViewAdapter: ObservableObject {
                 }
             }
         )
-        self.signUpViewModel = signUpViewModel
+        self.registerViewModel = signUpViewModel
     }
     
     func registerUser(email: String, password: String, completion: @escaping (Bool) -> Void) {
@@ -158,6 +145,16 @@ class AuthViewAdapter: ObservableObject {
             if authResult != nil {
                 completion(true)
             }
+        }
+    }
+    
+    func logout() {
+        do {
+            emailInput = ""
+            passwordInput = ""
+            try Auth.auth().signOut()
+        } catch let error as NSError {
+            print("Error logout: \(error.localizedDescription)")
         }
     }
 }

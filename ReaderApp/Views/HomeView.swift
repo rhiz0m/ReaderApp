@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewAdapter = HomeViewAdapter()
+    @ObservedObject var authViewAdapter: AuthViewAdapter
     @State var showSideMenu = false
     
     var body: some View {
@@ -33,6 +34,7 @@ struct HomeView: View {
         let indicator: String
         let showSelectedText: (Int) -> Void
         let closeSelectedText: (Int) -> Void
+        let logoutAction: () -> Void
     }
     
     @ViewBuilder func topHeader(viewModel: ViewModel) -> some View{
@@ -102,6 +104,9 @@ struct HomeView: View {
                         .font(Font.custom("PermanentMarker-Regular", size: 20))
                     Spacer()
                     Icons(imageName: viewModel.libraryIcon)
+                        .onTapGesture {
+                            authViewAdapter.logout()
+                        }
                 }
                 .padding(GridPoints.x2)
             }
@@ -113,5 +118,5 @@ struct HomeView: View {
 
 
 #Preview {
-    HomeView(viewAdapter: HomeViewAdapter(currentIndex: (0, 0)))
+    HomeView(viewAdapter: HomeViewAdapter(currentIndex: (0, 0)), authViewAdapter: AuthViewAdapter(coordinator: Coordinator()))
 }

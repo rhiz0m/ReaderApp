@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct SignUpView: View {
-    @ObservedObject var viewAdapter: AuthViewAdapter
+struct RegisterView: View {
+    @ObservedObject var authViewAdapter: AuthViewAdapter
     @State var email = ""
     @State var confirmEmail = ""
     @State var password = ""
@@ -17,13 +17,13 @@ struct SignUpView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        if let viewModel = viewAdapter.signUpViewModel {
+        if let viewModel = authViewAdapter.registerViewModel {
             content(viewModel: viewModel)
             
         } else {
             ProgressView()
                 .onAppear(perform: {
-                    viewAdapter.generateSignUpViewModel()
+                    authViewAdapter.generateSignUpViewModel()
                     
                 })
         }
@@ -34,22 +34,22 @@ struct SignUpView: View {
             VStack(spacing: 18) {
                 VStack {
                     EmailView(
-                        viewAdapter: viewAdapter,
+                        viewAdapter: authViewAdapter,
                         userNameInput: $email,
                         customLabel: viewModel.emailTitle, textSize: 14)
                     .padding(.vertical)
                     EmailView(
-                        viewAdapter: viewAdapter,
+                        viewAdapter: authViewAdapter,
                         userNameInput: $confirmEmail,
                         customLabel: viewModel.confirmEmailTitle, textSize: 12)
                     .padding(.vertical)
                     PasswordView(
-                        viewAdapter: viewAdapter,
+                        viewAdapter: authViewAdapter,
                         userNameInput: $password,
                         customLabel: viewModel.passwordTitle, textSize: 14)
                     .padding(.bottom, GridPoints.x3)
                     PasswordView(
-                        viewAdapter: viewAdapter,
+                        viewAdapter: authViewAdapter,
                         userNameInput: $confirmPassword,
                         customLabel: viewModel.confirmPasswordTitle, textSize: 12)
                     .padding(.bottom, GridPoints.x3)
@@ -59,7 +59,7 @@ struct SignUpView: View {
                     .rotationEffect(Angle(degrees: -GridPoints.x1))
                 
                 NavigationLink(
-                    destination: HomeView(),
+                    destination: HomeView(authViewAdapter: authViewAdapter),
                     isActive: $newRegistration,
                     label: { EmptyView() }
                 )
@@ -136,5 +136,5 @@ struct SignUpView: View {
 }
 
 #Preview {
-    SignUpView(viewAdapter: AuthViewAdapter(emailInput: "", passwordInput: ""))
+    RegisterView(authViewAdapter: AuthViewAdapter(coordinator: Coordinator()))
 }

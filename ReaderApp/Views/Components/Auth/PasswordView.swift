@@ -41,7 +41,7 @@ struct PasswordView_Previews: PreviewProvider {
     @State static var passwordInput: String = ""
     
     static var previews: some View {
-        PasswordView(viewAdapter: AuthViewAdapter(emailInput: userNameInput, passwordInput: ""),
+        PasswordView(viewAdapter: AuthViewAdapter(coordinator: Coordinator()),
                      userNameInput: $userNameInput, customLabel: "Password", textSize: 14)
         .previewLayout(.sizeThatFits)
     }

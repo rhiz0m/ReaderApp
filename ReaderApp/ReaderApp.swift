@@ -17,22 +17,31 @@ class AppDelegate: NSObject, UIApplicationDelegate {
   }
 }
 
+let coordinator = Coordinator()
+
 @main
 struct ReaderApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject var viewAdapter = AuthViewAdapter()
+    @StateObject var viewAdapter = AuthViewAdapter(coordinator: coordinator)
     
     var body: some Scene {
         WindowGroup {
             if let _ = viewAdapter.currentUser {
-                NavigationStack {
-                    HomeView()
-                }
+                NavigationStack(path: $viewAdapter.coordinator.path, root: {
+                    viewAdapter.coordinator.build(screen: .HomeView, authViewAdapter: viewAdapter)
+                        .navigationDestination(for: Screens.self) { screen in
+                            viewAdapter.coordinator.build(screen: screen, authViewAdapter: viewAdapter)
+                        }
+                })
             } else {
-                NavigationStack {
-                    LoginView(viewAdapter: viewAdapter)
-                }
+                NavigationStack(path: $viewAdapter.coordinator.path, root: {
+                    viewAdapter.coordinator.build(screen: .LoginView, authViewAdapter: viewAdapter)
+                        .navigationDestination(for: Screens.self) { screen in
+                            viewAdapter.coordinator.build(screen: screen, authViewAdapter: viewAdapter)
+                        }
+                })
             }
         }
     }
 }
+

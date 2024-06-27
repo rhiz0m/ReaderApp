@@ -8,21 +8,22 @@
 import SwiftUI
 
 struct LoginView: View {
-    @ObservedObject var viewAdapter: AuthViewAdapter
+    @ObservedObject var authViewAdapter: AuthViewAdapter
     @State private var loggedIn = false
     
     var body: some View {
-        if let viewModel = viewAdapter.loginViewModel {
+        if let viewModel = authViewAdapter.loginViewModel {
             content(viewModel: viewModel)
                 .background(
-                    NavigationLink(destination: HomeView(), isActive: $loggedIn) {
+                    NavigationLink(
+                        destination: HomeView(authViewAdapter: authViewAdapter), isActive: $loggedIn) {
                         EmptyView()
                     }
                 )
         } else {
             ProgressView()
                 .onAppear {
-                    viewAdapter.generateLoginViewModel()
+                    authViewAdapter.generateLoginViewModel()
                 }
         }
     }
@@ -43,9 +44,9 @@ struct LoginView: View {
             }
             VStack(spacing: 18) {
                 VStack {
-                    EmailView(viewAdapter: viewAdapter, userNameInput: $viewAdapter.emailInput, customLabel: viewModel.emailLabel, textSize: 14)
+                    EmailView(viewAdapter: authViewAdapter, userNameInput: $authViewAdapter.emailInput, customLabel: viewModel.emailLabel, textSize: 14)
                         .padding(.vertical)
-                    PasswordView(viewAdapter: viewAdapter, userNameInput: $viewAdapter.passwordInput, customLabel: viewModel.passwordLabel, textSize: 12)
+                    PasswordView(viewAdapter: authViewAdapter, userNameInput: $authViewAdapter.passwordInput, customLabel: viewModel.passwordLabel, textSize: 12)
                         .padding(.bottom, GridPoints.x3)
                 }
                 .padding(.horizontal, GridPoints.x2)
@@ -60,7 +61,7 @@ struct LoginView: View {
                     .cornerRadius(8)
                     .shadow(color: Color.brown.opacity(0.6), radius: 8, x: 0, y: 2)
                     .onTapGesture {
-                        if !viewAdapter.emailInput.isEmpty && !viewAdapter.passwordInput.isEmpty {
+                        if !authViewAdapter.emailInput.isEmpty && !authViewAdapter.passwordInput.isEmpty {
                             viewModel.loginAction { success in
                                 if success {
                                     loggedIn = true
@@ -69,7 +70,7 @@ struct LoginView: View {
                         }
                     }
                 
-                NavigationLink(destination: SignUpView(viewAdapter: viewAdapter)) {
+                NavigationLink(destination: RegisterView(authViewAdapter: authViewAdapter)) {
                     Text(viewModel.signUpLabel)
                 }
                 .bold()
@@ -117,5 +118,10 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView(viewAdapter: AuthViewAdapter(emailInput: "", passwordInput: ""))
+    LoginView(authViewAdapter: AuthViewAdapter(coordinator: Coordinator()))
 }
+
+//VStack {
+//    NavigationLink(destination: viewAdapter.coordinator.build(screen: .MatchDetailsView, viewAdapter: viewAdapter), label: {
+//        Text("Match Details")
+//    })

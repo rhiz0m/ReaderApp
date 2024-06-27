@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE63D0EA2C2D6FA9005448CF /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63D0E92C2D6FA9005448CF /* NavigationDestination.swift */; };
+		FE63D0EC2C2D75D2005448CF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63D0EB2C2D75D2005448CF /* Coordinator.swift */; };
+		FE63D0EE2C2D7980005448CF /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63D0ED2C2D7980005448CF /* LibraryView.swift */; };
 		FE6F22E62C297B9100638FE2 /* HomeViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22E42C297B9100638FE2 /* HomeViewAdapter.swift */; };
 		FE6F22E72C297B9100638FE2 /* AuthViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22E52C297B9100638FE2 /* AuthViewAdapter.swift */; };
 		FE6F22EE2C297BCD00638FE2 /* SplitValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22E82C297BCD00638FE2 /* SplitValues.swift */; };
@@ -46,7 +47,7 @@
 		FE6F23382C297E0E00638FE2 /* UnSelectBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23352C297E0E00638FE2 /* UnSelectBtn.swift */; };
 		FE6F23392C297E0E00638FE2 /* FlipBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23362C297E0E00638FE2 /* FlipBtn.swift */; };
 		FE6F233D2C2982FC00638FE2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F233B2C2982FC00638FE2 /* LoginView.swift */; };
-		FE6F233E2C2982FC00638FE2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F233C2C2982FC00638FE2 /* SignUpView.swift */; };
+		FE6F233E2C2982FC00638FE2 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F233C2C2982FC00638FE2 /* RegisterView.swift */; };
 		FE6F23402C29891B00638FE2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE6F233F2C29891B00638FE2 /* GoogleService-Info.plist */; };
 		FE6F23432C2989C200638FE2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FE6F23422C2989C200638FE2 /* FirebaseAuth */; };
 		FE6F23452C2989C200638FE2 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = FE6F23442C2989C200638FE2 /* FirebaseDatabase */; };
@@ -79,7 +80,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FE63D0E92C2D6FA9005448CF /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
+		FE63D0EB2C2D75D2005448CF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		FE63D0ED2C2D7980005448CF /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		FE6F22E42C297B9100638FE2 /* HomeViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewAdapter.swift; sourceTree = "<group>"; };
 		FE6F22E52C297B9100638FE2 /* AuthViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewAdapter.swift; sourceTree = "<group>"; };
 		FE6F22E82C297BCD00638FE2 /* SplitValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitValues.swift; sourceTree = "<group>"; };
@@ -119,7 +121,7 @@
 		FE6F23352C297E0E00638FE2 /* UnSelectBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnSelectBtn.swift; sourceTree = "<group>"; };
 		FE6F23362C297E0E00638FE2 /* FlipBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipBtn.swift; sourceTree = "<group>"; };
 		FE6F233B2C2982FC00638FE2 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		FE6F233C2C2982FC00638FE2 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		FE6F233C2C2982FC00638FE2 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		FE6F233F2C29891B00638FE2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FE6F234A2C299A9600638FE2 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		FEDDF8942C2738030001ADD8 /* ReaderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReaderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,7 +167,7 @@
 		FE63D0E82C2D6F7E005448CF /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				FE63D0E92C2D6FA9005448CF /* NavigationDestination.swift */,
+				FE63D0EB2C2D75D2005448CF /* Coordinator.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				FE6F23122C297D0C00638FE2 /* SideMenuView.swift */,
+				FE63D0ED2C2D7980005448CF /* LibraryView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -314,7 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				FE6F233B2C2982FC00638FE2 /* LoginView.swift */,
-				FE6F233C2C2982FC00638FE2 /* SignUpView.swift */,
+				FE6F233C2C2982FC00638FE2 /* RegisterView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 			files = (
 				FE6F232B2C297DA600638FE2 /* UserTextArea.swift in Sources */,
 				FE6F23042C297C2D00638FE2 /* HarryPotter.swift in Sources */,
+				FE63D0EC2C2D75D2005448CF /* Coordinator.swift in Sources */,
 				FE6F23062C297C2D00638FE2 /* TheMetamorphosis.swift in Sources */,
 				FE6F22F32C297BCD00638FE2 /* UsersTexts.swift in Sources */,
 				FE6F23032C297C2D00638FE2 /* NineteenEightyFour.swift in Sources */,
@@ -538,11 +542,10 @@
 				FE6F23072C297C2D00638FE2 /* RemembranceOfThingsPast.swift in Sources */,
 				FE6F231A2C297D3900638FE2 /* BtnSectionStyling.swift in Sources */,
 				FE6F230B2C297C5800638FE2 /* GridPoints.swift in Sources */,
-				FE6F233E2C2982FC00638FE2 /* SignUpView.swift in Sources */,
+				FE6F233E2C2982FC00638FE2 /* RegisterView.swift in Sources */,
 				FE6F22F22C297BCD00638FE2 /* GridItemState.swift in Sources */,
 				FE6F23022C297C2D00638FE2 /* TheHobbit.swift in Sources */,
 				FE6F22F72C297C1900638FE2 /* CurrentIndex.swift in Sources */,
-				FE63D0EA2C2D6FA9005448CF /* NavigationDestination.swift in Sources */,
 				FE6F23012C297C2D00638FE2 /* Mathilda.swift in Sources */,
 				FE6F22E72C297B9100638FE2 /* AuthViewAdapter.swift in Sources */,
 				FE6F23272C297DA600638FE2 /* ProcentageStack.swift in Sources */,
@@ -550,6 +553,7 @@
 				FE6F230E2C297C7300638FE2 /* Array.swift in Sources */,
 				FE6F23132C297D0C00638FE2 /* SideMenuView.swift in Sources */,
 				FE6F23292C297DA600638FE2 /* GridView.swift in Sources */,
+				FE63D0EE2C2D7980005448CF /* LibraryView.swift in Sources */,
 				FE6F22EE2C297BCD00638FE2 /* SplitValues.swift in Sources */,
 				FE6F232D2C297DA600638FE2 /* Icons.swift in Sources */,
 				FE6F23392C297E0E00638FE2 /* FlipBtn.swift in Sources */,

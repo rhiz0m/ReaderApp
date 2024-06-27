@@ -85,7 +85,7 @@ class HomeViewAdapter: ObservableObject, CurrentIndex {
     
     func generateViewModel() {
         self.viewModel = .init(
-            title: "Read Speedster",
+            title: "Reader App",
             burgerIcon: systemIcons.burgerMenu,
             libraryIcon: systemIcons.library,
             xMarkIcon: systemIcons.xmark,
@@ -96,6 +96,8 @@ class HomeViewAdapter: ObservableObject, CurrentIndex {
                 self.showSelectedText(selectedIndex: selectedItem)
             }, closeSelectedText: { selectedItem in
                 self.closeSelectedText(selectedItem: selectedItem)
+            }, logoutAction: {
+                self.viewModel?.logoutAction() /*authDbViewAdapter.logout()*/
             }
         )
     }
