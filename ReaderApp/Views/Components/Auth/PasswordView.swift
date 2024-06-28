@@ -30,7 +30,7 @@ struct PasswordView: View {
             }
             .padding(.bottom, -GridPoints.x1)
             .rotationEffect(.degrees(GridPoints.x2))
-            TextField("", text: $userNameInput)
+            SecureField("", text: $userNameInput)
                 .modifier(TextFeildStyling(customBgColor: .white, customBgStroke: CustomColors.defaultGreen))
         }
     }
