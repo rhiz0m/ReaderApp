@@ -11,6 +11,8 @@ struct RotatedText: View {
     var text: String
     var font: Font
     var color: Color
+    var textRotation: Double?
+    var charRotation: Double?
     
     var body: some View {
         HStack(spacing: 0) {
@@ -19,11 +21,11 @@ struct RotatedText: View {
                 Text(String(character))
                     .font(font)
                     .foregroundColor(color)
-                    .rotationEffect(.degrees(-90))
+                    .rotationEffect(.degrees(charRotation ?? 0.0))
                     .padding(GridPoints.x1)
             }
         }
-        .rotationEffect(.degrees(90))
+        .rotationEffect(.degrees(textRotation ?? 0.0))
     }
 }
 

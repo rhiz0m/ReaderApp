@@ -22,7 +22,7 @@ struct LoginView: View {
                         .opacity(0)
                 )
                 .onChange(of: loggedIn) {
-                        coordinator.push(.HomeView)
+                    coordinator.push(.HomeView)
                 }
         } else {
             ProgressView()
@@ -33,56 +33,68 @@ struct LoginView: View {
     }
     
     @ViewBuilder func content(viewModel: ViewModel) -> some View {
-        ZStack(alignment: .leading) {
-                backgroundImageView(imageName: "reader")
+        ZStack() {
+            backgroundImageView(imageName: "reader")
+            HStack() {
+                RotatedText(
+                    text: viewModel.readerTitle,
+                    font: Font.custom("PermanentMarker-Regular", size: 12),
+                    color: .white,
+                    textRotation: 15,
+                    charRotation: -15)
+                .padding()
                 
+              Spacer()
                 RotatedText(
                     text: viewModel.appTitle,
-                    font: Font.custom("PermanentMarker-Regular", size: 16),
-                    color: .white)
+                    font: Font.custom("PermanentMarker-Regular", size: 12),
+                    color: .white,
+                    textRotation: 90,
+                    charRotation: -90)
             }
-            VStack(spacing: 18) {
-                VStack {
-                    EmailView(viewAdapter: authViewAdapter, userNameInput: $authViewAdapter.emailInput, customLabel: viewModel.emailLabel, textSize: 14)
-                        .padding(.vertical)
-                    PasswordView(viewAdapter: authViewAdapter, userNameInput: $authViewAdapter.passwordInput, customLabel: viewModel.passwordLabel, textSize: 12)
-                        .padding(.bottom, GridPoints.x3)
-                }
-                .padding(.horizontal, GridPoints.x2)
-                Divider()
-                    .rotationEffect(Angle(degrees: -GridPoints.x1))
-                Text(viewModel.loginLabel)
-                    .font(.title2)
-                    .bold()
-                    .padding(.vertical, GridPoints.x1)
-                    .padding(.horizontal, GridPoints.x3)
-                    .background(.white)
-                    .cornerRadius(8)
-                    .shadow(color: Color.brown.opacity(0.6), radius: 8, x: 0, y: 2)
-                    .onTapGesture {
-                        if !authViewAdapter.emailInput.isEmpty && !authViewAdapter.passwordInput.isEmpty {
-                            viewModel.loginAction { success in
-                                if success {
-                                    loggedIn = true
-                                }
-                            }
-                        }
-                    }
-                Button(action: {
-                    coordinator.present(fullScreenCover: .RegisterView)
-                }) {
-                    Text(viewModel.registerLabel)
-                }
+            .padding(GridPoints.x8)
+        }
+        VStack(spacing: 18) {
+           
+                EmailView(viewAdapter: authViewAdapter, userNameInput: $authViewAdapter.emailInput, customLabel: viewModel.emailLabel, textSize: 12)
+                    .padding(.vertical)
+                PasswordView(viewAdapter: authViewAdapter, userNameInput: $authViewAdapter.passwordInput, customLabel: viewModel.passwordLabel, textSize: 12)
+                    .padding(.bottom, GridPoints.x3)
+          
+            Divider()
+                .rotationEffect(Angle(degrees: -GridPoints.half))
+            Text(viewModel.loginLabel)
+                .font(.title2)
                 .bold()
                 .padding(.vertical, GridPoints.x1)
                 .padding(.horizontal, GridPoints.x3)
-                .background(CustomColors.homeBackgroundColor)
-                .border(.white, width: 3)
+                .background(.white)
                 .cornerRadius(8)
-                .padding(.bottom, GridPoints.x2)
+                .shadow(color: Color.brown.opacity(0.6), radius: 8, x: 0, y: 2)
+                .onTapGesture {
+                    if !authViewAdapter.emailInput.isEmpty && !authViewAdapter.passwordInput.isEmpty {
+                        viewModel.loginAction { success in
+                            if success {
+                                loggedIn = true
+                            }
+                        }
+                    }
+                }
+            Button(action: {
+                coordinator.present(fullScreenCover: .RegisterView)
+            }) {
+                Text(viewModel.registerLabel)
             }
+            .bold()
+            .padding(.vertical, GridPoints.x1)
+            .padding(.horizontal, GridPoints.x3)
             .background(CustomColors.homeBackgroundColor)
-            .padding(.bottom, GridPoints.x8)
+            .border(.white, width: 3)
+            .cornerRadius(8)
+            .padding(.bottom, GridPoints.x2)
+        }
+        .background(CustomColors.homeBackgroundColor)
+        .padding(.bottom, GridPoints.x8)
         
         .padding(GridPoints.half)
     }
@@ -108,6 +120,7 @@ struct LoginView: View {
     }
     
     struct ViewModel {
+        let readerTitle: String
         let appTitle: String
         let loginLabel: String
         let registerLabel: String

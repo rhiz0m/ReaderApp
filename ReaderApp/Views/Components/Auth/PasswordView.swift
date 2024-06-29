@@ -18,18 +18,21 @@ struct PasswordView: View {
             ZStack(alignment: .center) {
                 Rectangle()
                     .frame(width: GridPoints.custom(16),height: GridPoints.x4)
-                    .rotationEffect(.degrees(-GridPoints.x2))
+                    .rotationEffect(.degrees(-GridPoints.x1))
                     .clipped()
-                    .modifier(TextFeildStyling(customBgColor: CustomColors.defaultGreen, customBgStroke: .orange))
+                    .modifier(TextFeildStyling(
+                        customBgColor: CustomColors.defaultGreen,
+                        customBgStroke: .orange,
+                        height: GridPoints.x4))
                 Text(customLabel)
                     .font(Font.custom("PermanentMarker-Regular", size: textSize))
-                    .rotationEffect(.degrees(-GridPoints.x1))
+                    .rotationEffect(.degrees(-GridPoints.half))
                     .foregroundStyle(.white)
                     .padding(.horizontal)
                     .padding(.bottom, GridPoints.half)
             }
             .padding(.bottom, -GridPoints.x1)
-            .rotationEffect(.degrees(GridPoints.x2))
+            .rotationEffect(.degrees(GridPoints.x1))
             SecureField("", text: $userNameInput)
                 .modifier(TextFeildStyling(customBgColor: .white, customBgStroke: CustomColors.defaultGreen))
         }

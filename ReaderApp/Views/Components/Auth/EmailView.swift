@@ -17,18 +17,21 @@ struct EmailView: View {
         VStack(alignment: .leading) {
             ZStack(alignment: .center) {
                     Rectangle()
-                        .frame(width: GridPoints.custom(14),height: GridPoints.x4)
+                        .frame(width: GridPoints.custom(16),height: GridPoints.x4)
                         .rotationEffect(.degrees(-GridPoints.x1))
-                        .modifier(TextFeildStyling(customBgColor: CustomColors.defaultGreen, customBgStroke: .black))
+                        .modifier(TextFeildStyling(
+                            customBgColor: CustomColors.defaultGreen,
+                            customBgStroke: .black,
+                            height: GridPoints.x4))
                     Text(customLabel)
                         .font(Font.custom("PermanentMarker-Regular", size: textSize))
-                        .rotationEffect(.degrees(-GridPoints.x1))
-                        .foregroundStyle(.yellow)
+                        .rotationEffect(.degrees(-GridPoints.half))
+                        .foregroundStyle(.white)
                         .padding(.horizontal)
                         .padding(.bottom, GridPoints.half)
             }
             .padding(.bottom, -GridPoints.x1)
-            .rotationEffect(.degrees(-GridPoints.x2))
+            .rotationEffect(.degrees(-GridPoints.x1))
          
             TextField("", text: $userNameInput)
                 .modifier(TextFeildStyling(customBgColor: .white, customBgStroke: CustomColors.homeBackgroundColor))
