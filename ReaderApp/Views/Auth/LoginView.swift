@@ -33,18 +33,13 @@ struct LoginView: View {
     }
     
     @ViewBuilder func content(viewModel: ViewModel) -> some View {
-        VStack(spacing: 0) {
-            ZStack(alignment: .bottom) {
-                backgroundImageView(imageName: "reader2")
+        ZStack(alignment: .leading) {
+                backgroundImageView(imageName: "reader")
                 
-                Text(viewModel.appTitle)
-                    .padding(.leading, GridPoints.custom(4))
-                    .rotation3DEffect(
-                        .degrees(50),
-                        axis: (x: 20.0, y: -90, z: 0.0)
-                    )
-                    .shadow(color: .yellow.opacity(0.5), radius: 1, x: 1, y: 1)
-                    .font(Font.custom("PermanentMarker-Regular", size: 35))
+                RotatedText(
+                    text: viewModel.appTitle,
+                    font: Font.custom("PermanentMarker-Regular", size: 16),
+                    color: .white)
             }
             VStack(spacing: 18) {
                 VStack {
@@ -88,7 +83,7 @@ struct LoginView: View {
             }
             .background(CustomColors.homeBackgroundColor)
             .padding(.bottom, GridPoints.x8)
-        }
+        
         .padding(GridPoints.half)
     }
     

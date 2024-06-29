@@ -54,6 +54,7 @@
 		FE6F23472C2989C200638FE2 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FE6F23462C2989C200638FE2 /* FirebaseDatabaseSwift */; };
 		FE6F23492C2989C200638FE2 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FE6F23482C2989C200638FE2 /* FirebaseFirestoreSwift */; };
 		FE6F234B2C299A9600638FE2 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F234A2C299A9600638FE2 /* UserData.swift */; };
+		FE7E91822C302A830020169A /* RotatedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E91812C302A830020169A /* RotatedText.swift */; };
 		FEDDF8982C2738030001ADD8 /* ReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDDF8972C2738030001ADD8 /* ReaderApp.swift */; };
 		FEDDF89C2C2738040001ADD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEDDF89B2C2738040001ADD8 /* Assets.xcassets */; };
 		FEDDF89F2C2738040001ADD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEDDF89E2C2738040001ADD8 /* Preview Assets.xcassets */; };
@@ -124,6 +125,7 @@
 		FE6F233C2C2982FC00638FE2 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		FE6F233F2C29891B00638FE2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FE6F234A2C299A9600638FE2 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		FE7E91812C302A830020169A /* RotatedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedText.swift; sourceTree = "<group>"; };
 		FEDDF8942C2738030001ADD8 /* ReaderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReaderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDDF8972C2738030001ADD8 /* ReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderApp.swift; sourceTree = "<group>"; };
 		FEDDF89B2C2738040001ADD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				FE6F23252C297DA600638FE2 /* Icons.swift */,
 				FE6F231F2C297DA600638FE2 /* ProcentageStack.swift */,
 				FE6F23232C297DA600638FE2 /* UserTextArea.swift */,
+				FE7E91812C302A830020169A /* RotatedText.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				FE6F23282C297DA600638FE2 /* BtnSection.swift in Sources */,
 				FE6F22F02C297BCD00638FE2 /* TextState.swift in Sources */,
 				FE6F23102C297CAD00638FE2 /* HomeView.swift in Sources */,
+				FE7E91822C302A830020169A /* RotatedText.swift in Sources */,
 				FE6F232C2C297DA600638FE2 /* CircleBtn.swift in Sources */,
 				FE6F233D2C2982FC00638FE2 /* LoginView.swift in Sources */,
 				FE6F22E62C297B9100638FE2 /* HomeViewAdapter.swift in Sources */,
