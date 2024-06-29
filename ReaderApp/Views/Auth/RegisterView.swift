@@ -31,9 +31,8 @@ struct RegisterView: View {
     }
     
     @ViewBuilder func content(viewModel: ViewModel) -> some View {
-        VStack(spacing: 0) {
-            VStack(spacing: 18) {
-                VStack {
+            VStack() {
+                Group {
                     EmailView(
                         viewAdapter: authViewAdapter,
                         userNameInput: $email,
@@ -55,7 +54,8 @@ struct RegisterView: View {
                         customLabel: viewModel.confirmPasswordTitle, textSize: 12)
                     .padding(.bottom, GridPoints.x3)
                 }
-                .padding(.horizontal, GridPoints.x2)
+                .padding(.horizontal, GridPoints.x1)
+                
                 Divider()
                     .rotationEffect(Angle(degrees: -GridPoints.x1))
                 
@@ -92,13 +92,14 @@ struct RegisterView: View {
                         presentationMode.wrappedValue.dismiss()
                     }
             }
-            .background(.yellow)
-        }
-        .padding(GridPoints.half)
+            
+        
+        .background(CustomColors.homeBackgroundColor)
+        .padding(.bottom, GridPoints.x8)
         .navigationBarBackButtonHidden(true)
         
     }
-    
+   
     @ViewBuilder private func backgroundImageView(imageName: String) -> some View {
         Image(imageName)
             .resizable()
@@ -108,8 +109,9 @@ struct RegisterView: View {
                 LinearGradient(
                     gradient: Gradient(
                         colors: [
-                            .yellow.opacity(0.2),
-                            .yellow.opacity(1.8)]
+                            CustomColors.homeBackgroundColor.opacity(0.2),
+                            CustomColors.homeBackgroundColor.opacity(1.8)
+                        ]
                     ),
                     startPoint: .top,
                     endPoint: .bottom

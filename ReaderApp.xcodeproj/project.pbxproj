@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE215FB72C3065F400E93D07 /* SimpleBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE215FB62C3065F400E93D07 /* SimpleBtn.swift */; };
 		FE63D0EC2C2D75D2005448CF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63D0EB2C2D75D2005448CF /* Coordinator.swift */; };
 		FE63D0EE2C2D7980005448CF /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63D0ED2C2D7980005448CF /* LibraryView.swift */; };
 		FE6F22E62C297B9100638FE2 /* HomeViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22E42C297B9100638FE2 /* HomeViewAdapter.swift */; };
@@ -81,6 +82,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE215FB62C3065F400E93D07 /* SimpleBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBtn.swift; sourceTree = "<group>"; };
 		FE63D0EB2C2D75D2005448CF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FE63D0ED2C2D7980005448CF /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		FE6F22E42C297B9100638FE2 /* HomeViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewAdapter.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 				FE6F23342C297E0E00638FE2 /* FlipBackBtn.swift */,
 				FE6F23362C297E0E00638FE2 /* FlipBtn.swift */,
 				FE6F23352C297E0E00638FE2 /* UnSelectBtn.swift */,
+				FE215FB62C3065F400E93D07 /* SimpleBtn.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				FE6F23072C297C2D00638FE2 /* RemembranceOfThingsPast.swift in Sources */,
 				FE6F231A2C297D3900638FE2 /* BtnSectionStyling.swift in Sources */,
 				FE6F230B2C297C5800638FE2 /* GridPoints.swift in Sources */,
+				FE215FB72C3065F400E93D07 /* SimpleBtn.swift in Sources */,
 				FE6F233E2C2982FC00638FE2 /* RegisterView.swift in Sources */,
 				FE6F22F22C297BCD00638FE2 /* GridItemState.swift in Sources */,
 				FE6F23022C297C2D00638FE2 /* TheHobbit.swift in Sources */,

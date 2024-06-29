@@ -14,16 +14,16 @@ struct LoginView: View {
     
     var body: some View {
         if let viewModel = authViewAdapter.loginViewModel {
-            content(viewModel: viewModel)
-                .background(
-                    NavigationLink(value: Screens.HomeView) {
-                        EmptyView()
+                content(viewModel: viewModel)
+                    .background(
+                        NavigationLink(value: Screens.HomeView) {
+                            EmptyView()
+                        }
+                            .opacity(0)
+                    )
+                    .onChange(of: loggedIn) {
+                        coordinator.push(.HomeView)
                     }
-                        .opacity(0)
-                )
-                .onChange(of: loggedIn) {
-                    coordinator.push(.HomeView)
-                }
         } else {
             ProgressView()
                 .onAppear {
@@ -34,69 +34,76 @@ struct LoginView: View {
     
     @ViewBuilder func content(viewModel: ViewModel) -> some View {
         ZStack() {
-            backgroundImageView(imageName: "reader")
-            HStack() {
+                backgroundImageView(imageName: "reader")
+      
+            Group() {
                 RotatedText(
                     text: viewModel.readerTitle,
-                    font: Font.custom("PermanentMarker-Regular", size: 12),
+                    font: Font.custom("PermanentMarker-Regular", size: 14),
                     color: .white,
                     textRotation: 15,
                     charRotation: -15)
-                .padding()
+                .padding(.top, -GridPoints.x5)
+                .padding(.leading)
                 
-              Spacer()
                 RotatedText(
                     text: viewModel.appTitle,
-                    font: Font.custom("PermanentMarker-Regular", size: 12),
+                    font: Font.custom("PermanentMarker-Regular", size: 14),
                     color: .white,
                     textRotation: 90,
                     charRotation: -90)
             }
-            .padding(GridPoints.x8)
+            .padding(.top, GridPoints.x4)
+            .padding(.trailing, GridPoints.custom(18))
         }
-        VStack(spacing: 18) {
-           
+        
+            Group {
                 EmailView(viewAdapter: authViewAdapter, userNameInput: $authViewAdapter.emailInput, customLabel: viewModel.emailLabel, textSize: 12)
+                    .padding(.horizontal, GridPoints.x2)
+                    .background(CustomColors.homeBackgroundColor)
                     .padding(.vertical)
+                    
                 PasswordView(viewAdapter: authViewAdapter, userNameInput: $authViewAdapter.passwordInput, customLabel: viewModel.passwordLabel, textSize: 12)
+                    .padding(.horizontal, GridPoints.x2)
+                    .background(CustomColors.homeBackgroundColor)
                     .padding(.bottom, GridPoints.x3)
-          
+            }
+            .padding(.top, GridPoints.x2)
+            
             Divider()
                 .rotationEffect(Angle(degrees: -GridPoints.half))
-            Text(viewModel.loginLabel)
-                .font(.title2)
-                .bold()
-                .padding(.vertical, GridPoints.x1)
-                .padding(.horizontal, GridPoints.x3)
-                .background(.white)
-                .cornerRadius(8)
-                .shadow(color: Color.brown.opacity(0.6), radius: 8, x: 0, y: 2)
-                .onTapGesture {
-                    if !authViewAdapter.emailInput.isEmpty && !authViewAdapter.passwordInput.isEmpty {
-                        viewModel.loginAction { success in
-                            if success {
-                                loggedIn = true
+            
+        VStack(spacing: 16) {
+                SimpleBtn(
+                    width: GridPoints.custom(14),
+                    label: viewModel.loginLabel,
+                    fontStyle: .title3,
+                    fontColor: .black,
+                    bgColor: .white,
+                    borderColor: .gray)
+                    .onTapGesture {
+                        if !authViewAdapter.emailInput.isEmpty && !authViewAdapter.passwordInput.isEmpty {
+                            viewModel.loginAction { success in
+                                if success {
+                                    loggedIn = true
+                                }
                             }
                         }
                     }
+                
+                SimpleBtn(
+                    width: GridPoints.custom(10),
+                    label: viewModel.registerLabel,
+                    fontStyle: .caption,
+                    fontColor: .white,
+                    bgColor: .black,
+                    borderColor: .white)
+                .onTapGesture {
+                    coordinator.present(fullScreenCover: .RegisterView)
                 }
-            Button(action: {
-                coordinator.present(fullScreenCover: .RegisterView)
-            }) {
-                Text(viewModel.registerLabel)
             }
-            .bold()
-            .padding(.vertical, GridPoints.x1)
-            .padding(.horizontal, GridPoints.x3)
-            .background(CustomColors.homeBackgroundColor)
-            .border(.white, width: 3)
-            .cornerRadius(8)
+            .padding(.top, GridPoints.x2)
             .padding(.bottom, GridPoints.x2)
-        }
-        .background(CustomColors.homeBackgroundColor)
-        .padding(.bottom, GridPoints.x8)
-        
-        .padding(GridPoints.half)
     }
     
     @ViewBuilder private func backgroundImageView(imageName: String) -> some View {
