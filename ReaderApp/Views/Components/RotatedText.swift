@@ -10,6 +10,7 @@ import SwiftUI
 struct RotatedText: View {
     var text: String
     var font: Font
+    var fontWeight: Font.Weight? = .regular
     var color: Color
     var textRotation: Double?
     var charRotation: Double?
@@ -20,6 +21,7 @@ struct RotatedText: View {
                 let character = text[text.index(text.startIndex, offsetBy: index)]
                 Text(String(character))
                     .font(font)
+                    .fontWeight(fontWeight)
                     .foregroundColor(color)
                     .rotationEffect(.degrees(charRotation ?? 0.0))
                     .padding(GridPoints.x1)
@@ -30,5 +32,5 @@ struct RotatedText: View {
 }
 
 #Preview {
-    RotatedText(text: "Apptitle", font: .caption, color: .black)
+    RotatedText(text: "Apptitle", font: .caption, fontWeight: .bold, color: .black)
 }

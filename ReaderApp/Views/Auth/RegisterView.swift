@@ -31,7 +31,10 @@ struct RegisterView: View {
     }
     
     @ViewBuilder func content(viewModel: ViewModel) -> some View {
-            VStack() {
+        ZStack {
+            CustomColors.homeBackgroundColor.edgesIgnoringSafeArea(.all)
+            
+            VStack {
                 Group {
                     EmailView(
                         viewAdapter: authViewAdapter,
@@ -55,18 +58,20 @@ struct RegisterView: View {
                     .padding(.bottom, GridPoints.x3)
                 }
                 .padding(.horizontal, GridPoints.x1)
+
                 
                 Divider()
-                    .rotationEffect(Angle(degrees: -GridPoints.x1))
+                    .rotationEffect(Angle(degrees: -GridPoints.half))
                 
-                Text(viewModel.registerTitle)
-                    .font(.title2)
-                    .bold()
-                    .padding(.vertical, GridPoints.x1)
-                    .padding(.horizontal, GridPoints.x3)
-                    .background(.white)
-                    .cornerRadius(8)
-                    .shadow(color: Color.brown.opacity(0.6), radius: 8, x: 0, y: 2)
+                
+                VStack(spacing: 16) {
+                    SimpleBtn(
+                        width: GridPoints.custom(14),
+                        label: viewModel.registerTitle,
+                        fontStyle: Font.custom("PermanentMarker-Regular", size: 16),
+                        fontColor: .black,
+                        bgColor: CustomColors.defaultGreen,
+                        borderColor: .green)
                     .onTapGesture {
                         if !email.isEmpty && email == confirmEmail && !password.isEmpty && password == confirmPassword {
                             viewModel.registerAction(email, password) { success in
@@ -79,45 +84,22 @@ struct RegisterView: View {
                             }
                         }
                     }
-                
-                Text(viewModel.cancelTitle)
-                    .bold()
-                    .padding(.vertical, GridPoints.x1)
-                    .padding(.horizontal, GridPoints.x3)
-                    .background(.yellow)
-                    .border(.white, width: 3)
-                    .cornerRadius(8)
-                    .padding(.bottom, GridPoints.x2)
+                    
+                    SimpleBtn(
+                        width: GridPoints.custom(10),
+                        label: viewModel.cancelTitle,
+                        fontStyle: Font.custom("PermanentMarker-Regular", size: 14),
+                        fontColor: .white,
+                        bgColor: .black,
+                        borderColor: .white)
                     .onTapGesture {
                         presentationMode.wrappedValue.dismiss()
                     }
+                }
+                .padding(.top, GridPoints.x8)
             }
-            
-        
-        .background(CustomColors.homeBackgroundColor)
-        .padding(.bottom, GridPoints.x8)
-        .navigationBarBackButtonHidden(true)
-        
-    }
-   
-    @ViewBuilder private func backgroundImageView(imageName: String) -> some View {
-        Image(imageName)
-            .resizable()
-            .scaledToFill()
-            .edgesIgnoringSafeArea(.bottom)
-            .overlay(
-                LinearGradient(
-                    gradient: Gradient(
-                        colors: [
-                            CustomColors.homeBackgroundColor.opacity(0.2),
-                            CustomColors.homeBackgroundColor.opacity(1.8)
-                        ]
-                    ),
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-                .edgesIgnoringSafeArea(.bottom)
-            )
+            .padding(.top)
+        }
     }
     
     struct ViewModel {

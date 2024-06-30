@@ -84,8 +84,9 @@ class AuthViewAdapter: ObservableObject {
     
     func generateLoginViewModel() {
         let loginViewModel = LoginView.ViewModel(
+            bgImage: "reading",
             readerTitle: "Re der",
-            appTitle: "App",
+            appTitle: "app",
             loginLabel: "Login",
             registerLabel: "Sign Up",
             passwordLabel: "Password",

@@ -97,7 +97,7 @@ class HomeViewAdapter: ObservableObject, CurrentIndex {
             }, closeSelectedText: { selectedItem in
                 self.closeSelectedText(selectedItem: selectedItem)
             }, logoutAction: {
-                self.viewModel?.logoutAction() /*authDbViewAdapter.logout()*/
+                self.viewModel?.logoutAction()
             }
         )
     }
