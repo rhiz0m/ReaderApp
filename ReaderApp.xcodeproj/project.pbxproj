@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE1D2F212C5160970085E063 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FE1D2F202C5160970085E063 /* .gitignore */; };
 		FE215FB72C3065F400E93D07 /* SimpleBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE215FB62C3065F400E93D07 /* SimpleBtn.swift */; };
 		FE63D0EC2C2D75D2005448CF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63D0EB2C2D75D2005448CF /* Coordinator.swift */; };
 		FE63D0EE2C2D7980005448CF /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63D0ED2C2D7980005448CF /* LibraryView.swift */; };
@@ -82,6 +83,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE1D2F202C5160970085E063 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FE215FB62C3065F400E93D07 /* SimpleBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBtn.swift; sourceTree = "<group>"; };
 		FE63D0EB2C2D75D2005448CF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FE63D0ED2C2D7980005448CF /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
@@ -168,6 +170,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE1D2F1E2C51590C0085E063 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		FE63D0E82C2D6F7E005448CF /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +360,7 @@
 		FEDDF8962C2738030001ADD8 /* ReaderApp */ = {
 			isa = PBXGroup;
 			children = (
+				FE1D2F1E2C51590C0085E063 /* Services */,
 				FE63D0E82C2D6F7E005448CF /* Navigation */,
 				FE6F22E32C297B7500638FE2 /* Utility */,
 				FE6F22E22C297A3500638FE2 /* Views */,
@@ -359,6 +369,7 @@
 				FEDDF8972C2738030001ADD8 /* ReaderApp.swift */,
 				FE6F233F2C29891B00638FE2 /* GoogleService-Info.plist */,
 				FEDDF89B2C2738040001ADD8 /* Assets.xcassets */,
+				FE1D2F202C5160970085E063 /* .gitignore */,
 				FEDDF89D2C2738040001ADD8 /* Preview Content */,
 			);
 			path = ReaderApp;
@@ -502,6 +513,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE1D2F212C5160970085E063 /* .gitignore in Resources */,
 				FEDDF89F2C2738040001ADD8 /* Preview Assets.xcassets in Resources */,
 				FEDDF89C2C2738040001ADD8 /* Assets.xcassets in Resources */,
 				FE6F23402C29891B00638FE2 /* GoogleService-Info.plist in Resources */,
