@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FE1D2F212C5160970085E063 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FE1D2F202C5160970085E063 /* .gitignore */; };
+		FE1D2F242C5161540085E063 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D2F232C5161540085E063 /* Constants.swift */; };
+		FE1D2F262C5161F40085E063 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D2F252C5161F40085E063 /* HTTPClient.swift */; };
 		FE215FB72C3065F400E93D07 /* SimpleBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE215FB62C3065F400E93D07 /* SimpleBtn.swift */; };
 		FE63D0EC2C2D75D2005448CF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63D0EB2C2D75D2005448CF /* Coordinator.swift */; };
 		FE63D0EE2C2D7980005448CF /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63D0ED2C2D7980005448CF /* LibraryView.swift */; };
@@ -84,6 +86,8 @@
 
 /* Begin PBXFileReference section */
 		FE1D2F202C5160970085E063 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FE1D2F232C5161540085E063 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FE1D2F252C5161F40085E063 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		FE215FB62C3065F400E93D07 /* SimpleBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBtn.swift; sourceTree = "<group>"; };
 		FE63D0EB2C2D75D2005448CF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FE63D0ED2C2D7980005448CF /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
@@ -173,8 +177,17 @@
 		FE1D2F1E2C51590C0085E063 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FE1D2F252C5161F40085E063 /* HTTPClient.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FE1D2F222C5161360085E063 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FE1D2F232C5161540085E063 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		FE63D0E82C2D6F7E005448CF /* Navigation */ = {
@@ -360,6 +373,7 @@
 		FEDDF8962C2738030001ADD8 /* ReaderApp */ = {
 			isa = PBXGroup;
 			children = (
+				FE1D2F222C5161360085E063 /* Constants */,
 				FE1D2F1E2C51590C0085E063 /* Services */,
 				FE63D0E82C2D6F7E005448CF /* Navigation */,
 				FE6F22E32C297B7500638FE2 /* Utility */,
@@ -570,6 +584,7 @@
 				FE6F23272C297DA600638FE2 /* ProcentageStack.swift in Sources */,
 				FE6F23182C297D3900638FE2 /* CardStyling.swift in Sources */,
 				FE6F230E2C297C7300638FE2 /* Array.swift in Sources */,
+				FE1D2F242C5161540085E063 /* Constants.swift in Sources */,
 				FE6F23132C297D0C00638FE2 /* SideMenuView.swift in Sources */,
 				FE6F23292C297DA600638FE2 /* GridView.swift in Sources */,
 				FE63D0EE2C2D7980005448CF /* LibraryView.swift in Sources */,
@@ -581,6 +596,7 @@
 				FE6F230A2C297C5800638FE2 /* Theme.swift in Sources */,
 				FE6F23282C297DA600638FE2 /* BtnSection.swift in Sources */,
 				FE6F22F02C297BCD00638FE2 /* TextState.swift in Sources */,
+				FE1D2F262C5161F40085E063 /* HTTPClient.swift in Sources */,
 				FE6F23102C297CAD00638FE2 /* HomeView.swift in Sources */,
 				FE7E91822C302A830020169A /* RotatedText.swift in Sources */,
 				FE6F232C2C297DA600638FE2 /* CircleBtn.swift in Sources */,
