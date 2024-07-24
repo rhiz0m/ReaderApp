@@ -35,6 +35,17 @@ struct ReaderApp: App {
                             coordinator.build(fullScreenCover: fullScreenCover, authViewAdapter: viewAdapter)
                         }
                 }
+                .onAppear {
+                    HTTPClient().fetchPoems() { result in
+                        switch result {
+                        case .success(let poems):
+                            print(poems)
+                        case .failure(let error):
+                            print(error)
+                        }
+                    }
+                }
+                
             } else {
                 NavigationStack(path: $coordinator.path) {
                     coordinator.build(screen: .LoginView, authViewAdapter: viewAdapter)

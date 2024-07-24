@@ -10,6 +10,9 @@
 		FE1D2F212C5160970085E063 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FE1D2F202C5160970085E063 /* .gitignore */; };
 		FE1D2F242C5161540085E063 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D2F232C5161540085E063 /* Constants.swift */; };
 		FE1D2F262C5161F40085E063 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D2F252C5161F40085E063 /* HTTPClient.swift */; };
+		FE1D2F282C5174110085E063 /* Poems.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D2F272C5174110085E063 /* Poems.swift */; };
+		FE1D2F2A2C517C960085E063 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D2F292C517C960085E063 /* Test.swift */; };
+		FE1D2F2C2C517ED30085E063 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D2F2B2C517ED30085E063 /* URL+Extensions.swift */; };
 		FE215FB72C3065F400E93D07 /* SimpleBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE215FB62C3065F400E93D07 /* SimpleBtn.swift */; };
 		FE63D0EC2C2D75D2005448CF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63D0EB2C2D75D2005448CF /* Coordinator.swift */; };
 		FE63D0EE2C2D7980005448CF /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63D0ED2C2D7980005448CF /* LibraryView.swift */; };
@@ -88,6 +91,9 @@
 		FE1D2F202C5160970085E063 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FE1D2F232C5161540085E063 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FE1D2F252C5161F40085E063 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		FE1D2F272C5174110085E063 /* Poems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poems.swift; sourceTree = "<group>"; };
+		FE1D2F292C517C960085E063 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		FE1D2F2B2C517ED30085E063 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		FE215FB62C3065F400E93D07 /* SimpleBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBtn.swift; sourceTree = "<group>"; };
 		FE63D0EB2C2D75D2005448CF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FE63D0ED2C2D7980005448CF /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
@@ -210,6 +216,7 @@
 				FE6F22EA2C297BCD00638FE2 /* TextState.swift */,
 				FE6F22ED2C297BCD00638FE2 /* UsersTexts.swift */,
 				FE6F234A2C299A9600638FE2 /* UserData.swift */,
+				FE1D2F272C5174110085E063 /* Poems.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,6 +239,7 @@
 				FE6F23142C297D1400638FE2 /* Modifiers */,
 				FE6F23112C297CFE00638FE2 /* SubViews */,
 				FE6F230F2C297CAD00638FE2 /* HomeView.swift */,
+				FE1D2F292C517C960085E063 /* Test.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -273,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				FE6F230D2C297C7300638FE2 /* Array.swift */,
+				FE1D2F2B2C517ED30085E063 /* URL+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -565,12 +574,14 @@
 				FE6F23382C297E0E00638FE2 /* UnSelectBtn.swift in Sources */,
 				FE6F23372C297E0E00638FE2 /* FlipBackBtn.swift in Sources */,
 				FE6F23002C297C2D00638FE2 /* WhereTheWildThingsAre.swift in Sources */,
+				FE1D2F282C5174110085E063 /* Poems.swift in Sources */,
 				FE6F23052C297C2D00638FE2 /* ThePhenomenologyOfMind.swift in Sources */,
 				FE6F23192C297D3900638FE2 /* TextFeildStyling.swift in Sources */,
 				FE6F234B2C299A9600638FE2 /* UserData.swift in Sources */,
 				FE6F22EF2C297BCD00638FE2 /* SystemIcons.swift in Sources */,
 				FE6F23262C297DA600638FE2 /* GridItem.swift in Sources */,
 				FEDDF8982C2738030001ADD8 /* ReaderApp.swift in Sources */,
+				FE1D2F2C2C517ED30085E063 /* URL+Extensions.swift in Sources */,
 				FE6F23072C297C2D00638FE2 /* RemembranceOfThingsPast.swift in Sources */,
 				FE6F231A2C297D3900638FE2 /* BtnSectionStyling.swift in Sources */,
 				FE6F230B2C297C5800638FE2 /* GridPoints.swift in Sources */,
@@ -595,6 +606,7 @@
 				FE6F23322C297DEC00638FE2 /* PasswordView.swift in Sources */,
 				FE6F230A2C297C5800638FE2 /* Theme.swift in Sources */,
 				FE6F23282C297DA600638FE2 /* BtnSection.swift in Sources */,
+				FE1D2F2A2C517C960085E063 /* Test.swift in Sources */,
 				FE6F22F02C297BCD00638FE2 /* TextState.swift in Sources */,
 				FE1D2F262C5161F40085E063 /* HTTPClient.swift in Sources */,
 				FE6F23102C297CAD00638FE2 /* HomeView.swift in Sources */,
