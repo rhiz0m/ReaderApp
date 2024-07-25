@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Poems: Codable {
+struct Poems: Codable, Identifiable {
+    let id = UUID()
     let poemLines: [String]
     
     private enum CodingKeys: String, CodingKey {

@@ -21,21 +21,9 @@ struct HomeView: View {
             ProgressView()
                 .onAppear(perform: {
                     viewAdapter.generateViewModel()
+                    viewAdapter.fetchPoems()
                 })
         }
-    }
-    
-    struct ViewModel {
-        let title: String
-        let burgerIcon: String
-        let libraryIcon: String
-        let xMarkIcon: String
-        let flipIcon: String
-        let dottedRectangle: String
-        let indicator: String
-        let showSelectedText: (Int) -> Void
-        let closeSelectedText: (Int) -> Void
-        let logoutAction: () -> Void
     }
     
     @ViewBuilder func topHeader(viewModel: ViewModel) -> some View{
@@ -71,6 +59,15 @@ struct HomeView: View {
                     
                     BtnSection(viewAdapter: viewAdapter)
                     
+                    VStack {
+                        List(viewAdapter.poems) { poems in
+                            Text("Poem: ")
+                            Text(poems.poemLines.joined(separator: "\n"))
+                                .foregroundStyle(.red)
+                        }
+                        .font(.caption)
+                    }
+                   
                 }
                 .bold()
                 .font(.largeTitle)
@@ -114,6 +111,19 @@ struct HomeView: View {
             
         }
         .background(CustomColors.homeBackgroundColor.gradient)
+    }
+    
+    struct ViewModel {
+        let title: String
+        let burgerIcon: String
+        let libraryIcon: String
+        let xMarkIcon: String
+        let flipIcon: String
+        let dottedRectangle: String
+        let indicator: String
+        let showSelectedText: (Int) -> Void
+        let closeSelectedText: (Int) -> Void
+        let logoutAction: () -> Void
     }
 }
 

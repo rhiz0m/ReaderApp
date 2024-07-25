@@ -8,7 +8,7 @@
 import Foundation
 
 struct PoemsRepository {
-    private let poemsDao = PoemsDao()
+    private let poemsDao = PoemsDAO()
     
     func getPoems(completion: @escaping (Result<[Poems], NetworkError>) -> Void) {
         poemsDao.fetchPoems() { result in

@@ -9,7 +9,9 @@ import Foundation
 import Combine
 
 class HomeViewAdapter: ObservableObject, CurrentIndex {
-    @Published var viewModel: HomeView.ViewModel?    
+    @Published var viewModel: HomeView.ViewModel?
+    @Published var poems: [Poems] = []
+    @Published var repository = PoemsRepository()
     
     @Published var usersText: UsersTexts
     @Published var gridItemState: GridItemState
@@ -100,6 +102,19 @@ class HomeViewAdapter: ObservableObject, CurrentIndex {
                 self.viewModel?.logoutAction()
             }
         )
+    }
+    
+    func fetchPoems() {
+        repository.getPoems() { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let poems):
+                    self?.poems = poems
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
     
     func userSelectedText() {

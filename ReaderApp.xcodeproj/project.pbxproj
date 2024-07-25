@@ -11,7 +11,6 @@
 		FE1D2F242C5161540085E063 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D2F232C5161540085E063 /* Constants.swift */; };
 		FE1D2F262C5161F40085E063 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D2F252C5161F40085E063 /* HTTPClient.swift */; };
 		FE1D2F282C5174110085E063 /* Poems.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D2F272C5174110085E063 /* Poems.swift */; };
-		FE1D2F2A2C517C960085E063 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D2F292C517C960085E063 /* Test.swift */; };
 		FE1D2F2C2C517ED30085E063 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D2F2B2C517ED30085E063 /* URL+Extensions.swift */; };
 		FE215FB72C3065F400E93D07 /* SimpleBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE215FB62C3065F400E93D07 /* SimpleBtn.swift */; };
 		FE63D0EC2C2D75D2005448CF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63D0EB2C2D75D2005448CF /* Coordinator.swift */; };
@@ -94,7 +93,6 @@
 		FE1D2F232C5161540085E063 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FE1D2F252C5161F40085E063 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		FE1D2F272C5174110085E063 /* Poems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poems.swift; sourceTree = "<group>"; };
-		FE1D2F292C517C960085E063 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		FE1D2F2B2C517ED30085E063 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		FE215FB62C3065F400E93D07 /* SimpleBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBtn.swift; sourceTree = "<group>"; };
 		FE63D0EB2C2D75D2005448CF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				FE1D2F252C5161F40085E063 /* HTTPClient.swift */,
-				FE78F17C2C52651900B763E2 /* PoemsDao.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -244,7 +241,6 @@
 				FE6F23142C297D1400638FE2 /* Modifiers */,
 				FE6F23112C297CFE00638FE2 /* SubViews */,
 				FE6F230F2C297CAD00638FE2 /* HomeView.swift */,
-				FE1D2F292C517C960085E063 /* Test.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -372,6 +368,14 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		FE78F1812C52A6E100B763E2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FE78F17C2C52651900B763E2 /* PoemsDao.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		FEDDF88B2C2738030001ADD8 = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +399,7 @@
 		FEDDF8962C2738030001ADD8 /* ReaderApp */ = {
 			isa = PBXGroup;
 			children = (
+				FE78F1812C52A6E100B763E2 /* Data */,
 				FE78F17E2C5269A100B763E2 /* Repository */,
 				FE1D2F222C5161360085E063 /* Constants */,
 				FE1D2F1E2C51590C0085E063 /* Services */,
@@ -621,7 +626,6 @@
 				FE6F23322C297DEC00638FE2 /* PasswordView.swift in Sources */,
 				FE6F230A2C297C5800638FE2 /* Theme.swift in Sources */,
 				FE6F23282C297DA600638FE2 /* BtnSection.swift in Sources */,
-				FE1D2F2A2C517C960085E063 /* Test.swift in Sources */,
 				FE78F1802C526A1700B763E2 /* PoemsRepository.swift in Sources */,
 				FE6F22F02C297BCD00638FE2 /* TextState.swift in Sources */,
 				FE1D2F262C5161F40085E063 /* HTTPClient.swift in Sources */,

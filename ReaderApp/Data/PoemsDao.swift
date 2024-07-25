@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PoemsDao {
+struct PoemsDAO {
     private let httpClient = HTTPClient()
     
     func fetchPoems(completion: @escaping (Result<[Poems], NetworkError>) -> Void) {
