@@ -9,8 +9,8 @@ import Foundation
 import Combine
 
 class HomeViewAdapter: ObservableObject, CurrentIndex {
+    @Published var viewModel: HomeView.ViewModel?    
     
-    @Published var viewModel: HomeView.ViewModel?
     @Published var usersText: UsersTexts
     @Published var gridItemState: GridItemState
     @Published var splitValues: SplitValues

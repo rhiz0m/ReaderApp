@@ -22,9 +22,6 @@ struct HTTPClient {
                 return completion(.failure(.noData))
             }
             completion(.success(data))
-            
-//            print("This is my incoming dataaaaaaaaa: \(data)")
-            
         }.resume()
     }
 }
