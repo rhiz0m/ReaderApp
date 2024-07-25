@@ -61,6 +61,8 @@
 		FE6F23472C2989C200638FE2 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FE6F23462C2989C200638FE2 /* FirebaseDatabaseSwift */; };
 		FE6F23492C2989C200638FE2 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FE6F23482C2989C200638FE2 /* FirebaseFirestoreSwift */; };
 		FE6F234B2C299A9600638FE2 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F234A2C299A9600638FE2 /* UserData.swift */; };
+		FE78F17D2C52651900B763E2 /* PoemsDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE78F17C2C52651900B763E2 /* PoemsDao.swift */; };
+		FE78F1802C526A1700B763E2 /* PoemsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE78F17F2C526A1700B763E2 /* PoemsRepository.swift */; };
 		FE7E91822C302A830020169A /* RotatedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E91812C302A830020169A /* RotatedText.swift */; };
 		FEDDF8982C2738030001ADD8 /* ReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDDF8972C2738030001ADD8 /* ReaderApp.swift */; };
 		FEDDF89C2C2738040001ADD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEDDF89B2C2738040001ADD8 /* Assets.xcassets */; };
@@ -139,6 +141,8 @@
 		FE6F233C2C2982FC00638FE2 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		FE6F233F2C29891B00638FE2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FE6F234A2C299A9600638FE2 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		FE78F17C2C52651900B763E2 /* PoemsDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemsDao.swift; sourceTree = "<group>"; };
+		FE78F17F2C526A1700B763E2 /* PoemsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemsRepository.swift; sourceTree = "<group>"; };
 		FE7E91812C302A830020169A /* RotatedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedText.swift; sourceTree = "<group>"; };
 		FEDDF8942C2738030001ADD8 /* ReaderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReaderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDDF8972C2738030001ADD8 /* ReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderApp.swift; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				FE1D2F252C5161F40085E063 /* HTTPClient.swift */,
+				FE78F17C2C52651900B763E2 /* PoemsDao.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -359,6 +364,14 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		FE78F17E2C5269A100B763E2 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				FE78F17F2C526A1700B763E2 /* PoemsRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		FEDDF88B2C2738030001ADD8 = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +395,7 @@
 		FEDDF8962C2738030001ADD8 /* ReaderApp */ = {
 			isa = PBXGroup;
 			children = (
+				FE78F17E2C5269A100B763E2 /* Repository */,
 				FE1D2F222C5161360085E063 /* Constants */,
 				FE1D2F1E2C51590C0085E063 /* Services */,
 				FE63D0E82C2D6F7E005448CF /* Navigation */,
@@ -574,6 +588,7 @@
 				FE6F23382C297E0E00638FE2 /* UnSelectBtn.swift in Sources */,
 				FE6F23372C297E0E00638FE2 /* FlipBackBtn.swift in Sources */,
 				FE6F23002C297C2D00638FE2 /* WhereTheWildThingsAre.swift in Sources */,
+				FE78F17D2C52651900B763E2 /* PoemsDao.swift in Sources */,
 				FE1D2F282C5174110085E063 /* Poems.swift in Sources */,
 				FE6F23052C297C2D00638FE2 /* ThePhenomenologyOfMind.swift in Sources */,
 				FE6F23192C297D3900638FE2 /* TextFeildStyling.swift in Sources */,
@@ -607,6 +622,7 @@
 				FE6F230A2C297C5800638FE2 /* Theme.swift in Sources */,
 				FE6F23282C297DA600638FE2 /* BtnSection.swift in Sources */,
 				FE1D2F2A2C517C960085E063 /* Test.swift in Sources */,
+				FE78F1802C526A1700B763E2 /* PoemsRepository.swift in Sources */,
 				FE6F22F02C297BCD00638FE2 /* TextState.swift in Sources */,
 				FE1D2F262C5161F40085E063 /* HTTPClient.swift in Sources */,
 				FE6F23102C297CAD00638FE2 /* HomeView.swift in Sources */,

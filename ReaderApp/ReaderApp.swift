@@ -36,10 +36,11 @@ struct ReaderApp: App {
                         }
                 }
                 .onAppear {
-                    HTTPClient().fetchPoems() { result in
+                    let poemsDAO = PoemsDao()
+                    poemsDAO.fetchPoems { result in
                         switch result {
                         case .success(let poems):
-                            print(poems)
+                            print("Testing the incoming data from poems API: \(poems)")
                         case .failure(let error):
                             print(error)
                         }

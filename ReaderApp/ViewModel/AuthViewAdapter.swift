@@ -34,7 +34,7 @@ class AuthViewAdapter: ObservableObject {
     private func setupAuthStateListener() {
         auth.addStateDidChangeListener { auth, user in
             if let user = user {
-                print("A user has been logged in \(user.email ?? "No Email")")
+                //print("A user has been logged in \(user.email ?? "No Email")")
                 self.currentUser = user
                 self.startListeningToDb()
             } else {
@@ -42,7 +42,7 @@ class AuthViewAdapter: ObservableObject {
                 self.dbListener = nil
                 self.currentUserData = nil
                 self.currentUser = nil
-                print("A user has logged out")
+                //print("A user has logged out")
             }
         }
     }
@@ -53,13 +53,13 @@ class AuthViewAdapter: ObservableObject {
         guard let user = currentUser else { return }
         
         let documentPath = "\(USER_DATA_COLLECTION)/\(user.uid)"
-        print("Listening to Firestore document: \(documentPath)")
-        print("Document path: \(documentPath)")
+        //print("Listening to Firestore document: \(documentPath)")
+        //print("Document path: \(documentPath)")
         
         dbListener = db.collection(self.USER_DATA_COLLECTION).document(user.uid).addSnapshotListener { snapshot, error in
             
             if let error = error {
-                print("Error occurred: \(error.localizedDescription)")
+                //print("Error occurred: \(error.localizedDescription)")
                 return
             }
             
@@ -107,7 +107,7 @@ class AuthViewAdapter: ObservableObject {
                 print("Error logging in:", error.localizedDescription)
                 completion(false)
             } else {
-                print("You are logged in!")
+                //print("You are logged in!")
                 completion(true)
             }
         }
