@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE0316122C53CC5E0090ADFA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FE0316112C53CC5E0090ADFA /* README.md */; };
 		FE1D2F212C5160970085E063 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FE1D2F202C5160970085E063 /* .gitignore */; };
 		FE1D2F242C5161540085E063 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D2F232C5161540085E063 /* Constants.swift */; };
 		FE1D2F262C5161F40085E063 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D2F252C5161F40085E063 /* HTTPClient.swift */; };
@@ -89,6 +90,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE0316112C53CC5E0090ADFA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FE1D2F202C5160970085E063 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FE1D2F232C5161540085E063 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FE1D2F252C5161F40085E063 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 				FEDDF89B2C2738040001ADD8 /* Assets.xcassets */,
 				FE1D2F202C5160970085E063 /* .gitignore */,
 				FEDDF89D2C2738040001ADD8 /* Preview Content */,
+				FE0316112C53CC5E0090ADFA /* README.md */,
 			);
 			path = ReaderApp;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 			files = (
 				FE1D2F212C5160970085E063 /* .gitignore in Resources */,
 				FEDDF89F2C2738040001ADD8 /* Preview Assets.xcassets in Resources */,
+				FE0316122C53CC5E0090ADFA /* README.md in Resources */,
 				FEDDF89C2C2738040001ADD8 /* Assets.xcassets in Resources */,
 				FE6F23402C29891B00638FE2 /* GoogleService-Info.plist in Resources */,
 			);
