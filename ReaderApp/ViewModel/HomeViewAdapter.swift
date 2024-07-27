@@ -88,7 +88,7 @@ class HomeViewAdapter: ObservableObject, CurrentIndex {
         self.viewModel = .init(
             title: "Reader App",
             burgerIcon: systemIcons.burgerMenu,
-            libraryIcon: systemIcons.library,
+            logoutIcon: systemIcons.logout,
             xMarkIcon: systemIcons.xmark,
             flipIcon: systemIcons.flipIcon,
             dottedRectangle: systemIcons.dottedRectangle,

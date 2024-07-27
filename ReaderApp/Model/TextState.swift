@@ -12,9 +12,10 @@ class TextState {
     @ObservedObject var homeViewAdapter: HomeViewAdapter
     var index: Int
     var selectedText: String
-    let totalTextLength: Int
+//    let totalTextLength: Int
     
     var textPercentage: Double {
+        guard homeViewAdapter.words.count > 0 else { return 0.0 }
             let currentWordIndex = homeViewAdapter.currentIndex.0
             let percentage = Double(currentWordIndex) / Double(homeViewAdapter.words.count) * 100
             let clampedPercentage = max(0.0, min(100.0, percentage))
@@ -26,7 +27,7 @@ class TextState {
         self.homeViewAdapter = homeViewAdapter
         self.index = index
         self.selectedText = selectedText
-        self.totalTextLength = totalTextLength
+//        self.totalTextLength = totalTextLength
     }
 }
 

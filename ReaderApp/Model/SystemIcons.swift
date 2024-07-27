@@ -14,5 +14,6 @@ struct SystemIcons {
     let flipIcon = "arrow.right.arrow.left"
     let dottedRectangle = "rectangle.dashed"
     let indicator = "chevron.down"
+    let logout = "square.and.arrow.up"
 }
 

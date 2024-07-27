@@ -92,7 +92,7 @@ struct HomeView: View {
                     Text(viewModel.title)
                         .font(Font.custom("PermanentMarker-Regular", size: 20))
                     Spacer()
-                    Icons(imageName: viewModel.libraryIcon)
+                    Icons(imageName: viewModel.logoutIcon)
                         .onTapGesture {
                             authViewAdapter.logout()
                         }
@@ -107,7 +107,7 @@ struct HomeView: View {
     struct ViewModel {
         let title: String
         let burgerIcon: String
-        let libraryIcon: String
+        let logoutIcon: String
         let xMarkIcon: String
         let flipIcon: String
         let dottedRectangle: String
