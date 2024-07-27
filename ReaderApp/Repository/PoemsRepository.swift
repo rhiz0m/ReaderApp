@@ -11,11 +11,12 @@ struct PoemsRepository {
     private let poemsDao = PoemsDAO()
     
     func getPoems(completion: @escaping (Result<[Poems], NetworkError>) -> Void) {
-        poemsDao.fetchPoems() { result in
-            completion(result)
-        }
-        
-        // TODO: Add functions to Layer
-    }
+         poemsDao.fetchPoems() { result in
+             completion(result)
+         }
+     }
     
+    func mergePoemLines(from poems: [Poems]) -> [String] {
+        return poems.map { $0.poemLines.joined(separator: "\n") }
+    }
 }

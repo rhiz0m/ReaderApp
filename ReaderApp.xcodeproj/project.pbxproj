@@ -23,16 +23,8 @@
 		FE6F22F02C297BCD00638FE2 /* TextState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22EA2C297BCD00638FE2 /* TextState.swift */; };
 		FE6F22F12C297BCD00638FE2 /* ReaderVelocity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22EB2C297BCD00638FE2 /* ReaderVelocity.swift */; };
 		FE6F22F22C297BCD00638FE2 /* GridItemState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22EC2C297BCD00638FE2 /* GridItemState.swift */; };
-		FE6F22F32C297BCD00638FE2 /* UsersTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22ED2C297BCD00638FE2 /* UsersTexts.swift */; };
+		FE6F22F32C297BCD00638FE2 /* PoemTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22ED2C297BCD00638FE2 /* PoemTexts.swift */; };
 		FE6F22F72C297C1900638FE2 /* CurrentIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22F62C297C1900638FE2 /* CurrentIndex.swift */; };
-		FE6F23002C297C2D00638FE2 /* WhereTheWildThingsAre.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22F82C297C2D00638FE2 /* WhereTheWildThingsAre.swift */; };
-		FE6F23012C297C2D00638FE2 /* Mathilda.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22F92C297C2D00638FE2 /* Mathilda.swift */; };
-		FE6F23022C297C2D00638FE2 /* TheHobbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22FA2C297C2D00638FE2 /* TheHobbit.swift */; };
-		FE6F23032C297C2D00638FE2 /* NineteenEightyFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22FB2C297C2D00638FE2 /* NineteenEightyFour.swift */; };
-		FE6F23042C297C2D00638FE2 /* HarryPotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22FC2C297C2D00638FE2 /* HarryPotter.swift */; };
-		FE6F23052C297C2D00638FE2 /* ThePhenomenologyOfMind.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22FD2C297C2D00638FE2 /* ThePhenomenologyOfMind.swift */; };
-		FE6F23062C297C2D00638FE2 /* TheMetamorphosis.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22FE2C297C2D00638FE2 /* TheMetamorphosis.swift */; };
-		FE6F23072C297C2D00638FE2 /* RemembranceOfThingsPast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F22FF2C297C2D00638FE2 /* RemembranceOfThingsPast.swift */; };
 		FE6F230A2C297C5800638FE2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23082C297C5800638FE2 /* Theme.swift */; };
 		FE6F230B2C297C5800638FE2 /* GridPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F23092C297C5800638FE2 /* GridPoints.swift */; };
 		FE6F230E2C297C7300638FE2 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F230D2C297C7300638FE2 /* Array.swift */; };
@@ -106,16 +98,8 @@
 		FE6F22EA2C297BCD00638FE2 /* TextState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextState.swift; sourceTree = "<group>"; };
 		FE6F22EB2C297BCD00638FE2 /* ReaderVelocity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderVelocity.swift; sourceTree = "<group>"; };
 		FE6F22EC2C297BCD00638FE2 /* GridItemState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridItemState.swift; sourceTree = "<group>"; };
-		FE6F22ED2C297BCD00638FE2 /* UsersTexts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTexts.swift; sourceTree = "<group>"; };
+		FE6F22ED2C297BCD00638FE2 /* PoemTexts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemTexts.swift; sourceTree = "<group>"; };
 		FE6F22F62C297C1900638FE2 /* CurrentIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentIndex.swift; sourceTree = "<group>"; };
-		FE6F22F82C297C2D00638FE2 /* WhereTheWildThingsAre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhereTheWildThingsAre.swift; sourceTree = "<group>"; };
-		FE6F22F92C297C2D00638FE2 /* Mathilda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mathilda.swift; sourceTree = "<group>"; };
-		FE6F22FA2C297C2D00638FE2 /* TheHobbit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheHobbit.swift; sourceTree = "<group>"; };
-		FE6F22FB2C297C2D00638FE2 /* NineteenEightyFour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NineteenEightyFour.swift; sourceTree = "<group>"; };
-		FE6F22FC2C297C2D00638FE2 /* HarryPotter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HarryPotter.swift; sourceTree = "<group>"; };
-		FE6F22FD2C297C2D00638FE2 /* ThePhenomenologyOfMind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThePhenomenologyOfMind.swift; sourceTree = "<group>"; };
-		FE6F22FE2C297C2D00638FE2 /* TheMetamorphosis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheMetamorphosis.swift; sourceTree = "<group>"; };
-		FE6F22FF2C297C2D00638FE2 /* RemembranceOfThingsPast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemembranceOfThingsPast.swift; sourceTree = "<group>"; };
 		FE6F23082C297C5800638FE2 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		FE6F23092C297C5800638FE2 /* GridPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridPoints.swift; sourceTree = "<group>"; };
 		FE6F230D2C297C7300638FE2 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
@@ -212,13 +196,12 @@
 			isa = PBXGroup;
 			children = (
 				FE6F22F52C297C0200638FE2 /* Protocols */,
-				FE6F22F42C297BF100638FE2 /* DummyTexts */,
 				FE6F22EC2C297BCD00638FE2 /* GridItemState.swift */,
 				FE6F22EB2C297BCD00638FE2 /* ReaderVelocity.swift */,
 				FE6F22E82C297BCD00638FE2 /* SplitValues.swift */,
 				FE6F22E92C297BCD00638FE2 /* SystemIcons.swift */,
 				FE6F22EA2C297BCD00638FE2 /* TextState.swift */,
-				FE6F22ED2C297BCD00638FE2 /* UsersTexts.swift */,
+				FE6F22ED2C297BCD00638FE2 /* PoemTexts.swift */,
 				FE6F234A2C299A9600638FE2 /* UserData.swift */,
 				FE1D2F272C5174110085E063 /* Poems.swift */,
 			);
@@ -255,21 +238,6 @@
 				FE6F23082C297C5800638FE2 /* Theme.swift */,
 			);
 			path = Utility;
-			sourceTree = "<group>";
-		};
-		FE6F22F42C297BF100638FE2 /* DummyTexts */ = {
-			isa = PBXGroup;
-			children = (
-				FE6F22FC2C297C2D00638FE2 /* HarryPotter.swift */,
-				FE6F22F92C297C2D00638FE2 /* Mathilda.swift */,
-				FE6F22FB2C297C2D00638FE2 /* NineteenEightyFour.swift */,
-				FE6F22FF2C297C2D00638FE2 /* RemembranceOfThingsPast.swift */,
-				FE6F22FA2C297C2D00638FE2 /* TheHobbit.swift */,
-				FE6F22FE2C297C2D00638FE2 /* TheMetamorphosis.swift */,
-				FE6F22FD2C297C2D00638FE2 /* ThePhenomenologyOfMind.swift */,
-				FE6F22F82C297C2D00638FE2 /* WhereTheWildThingsAre.swift */,
-			);
-			path = DummyTexts;
 			sourceTree = "<group>";
 		};
 		FE6F22F52C297C0200638FE2 /* Protocols */ = {
@@ -588,33 +556,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE6F232B2C297DA600638FE2 /* UserTextArea.swift in Sources */,
-				FE6F23042C297C2D00638FE2 /* HarryPotter.swift in Sources */,
 				FE63D0EC2C2D75D2005448CF /* Coordinator.swift in Sources */,
-				FE6F23062C297C2D00638FE2 /* TheMetamorphosis.swift in Sources */,
-				FE6F22F32C297BCD00638FE2 /* UsersTexts.swift in Sources */,
-				FE6F23032C297C2D00638FE2 /* NineteenEightyFour.swift in Sources */,
+				FE6F22F32C297BCD00638FE2 /* PoemTexts.swift in Sources */,
 				FE6F22F12C297BCD00638FE2 /* ReaderVelocity.swift in Sources */,
 				FE6F23382C297E0E00638FE2 /* UnSelectBtn.swift in Sources */,
 				FE6F23372C297E0E00638FE2 /* FlipBackBtn.swift in Sources */,
-				FE6F23002C297C2D00638FE2 /* WhereTheWildThingsAre.swift in Sources */,
 				FE78F17D2C52651900B763E2 /* PoemsDao.swift in Sources */,
 				FE1D2F282C5174110085E063 /* Poems.swift in Sources */,
-				FE6F23052C297C2D00638FE2 /* ThePhenomenologyOfMind.swift in Sources */,
 				FE6F23192C297D3900638FE2 /* TextFeildStyling.swift in Sources */,
 				FE6F234B2C299A9600638FE2 /* UserData.swift in Sources */,
 				FE6F22EF2C297BCD00638FE2 /* SystemIcons.swift in Sources */,
 				FE6F23262C297DA600638FE2 /* GridItem.swift in Sources */,
 				FEDDF8982C2738030001ADD8 /* ReaderApp.swift in Sources */,
 				FE1D2F2C2C517ED30085E063 /* URL+Extensions.swift in Sources */,
-				FE6F23072C297C2D00638FE2 /* RemembranceOfThingsPast.swift in Sources */,
 				FE6F231A2C297D3900638FE2 /* BtnSectionStyling.swift in Sources */,
 				FE6F230B2C297C5800638FE2 /* GridPoints.swift in Sources */,
 				FE215FB72C3065F400E93D07 /* SimpleBtn.swift in Sources */,
 				FE6F233E2C2982FC00638FE2 /* RegisterView.swift in Sources */,
 				FE6F22F22C297BCD00638FE2 /* GridItemState.swift in Sources */,
-				FE6F23022C297C2D00638FE2 /* TheHobbit.swift in Sources */,
 				FE6F22F72C297C1900638FE2 /* CurrentIndex.swift in Sources */,
-				FE6F23012C297C2D00638FE2 /* Mathilda.swift in Sources */,
 				FE6F22E72C297B9100638FE2 /* AuthViewAdapter.swift in Sources */,
 				FE6F23272C297DA600638FE2 /* ProcentageStack.swift in Sources */,
 				FE6F23182C297D3900638FE2 /* CardStyling.swift in Sources */,

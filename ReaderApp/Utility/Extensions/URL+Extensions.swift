@@ -8,7 +8,7 @@
 import Foundation
 
 extension URL {
-    static func forPoemsByAuthor() -> URL? {
-        URL(string: "https://poetrydb.org/author,linecount/shelley;14/lines")
+    static func getPoetryURL() -> URL? {
+        URL(string: "\(Constants.poetryURL)")
     }
 }

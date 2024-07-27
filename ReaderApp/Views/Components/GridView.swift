@@ -18,7 +18,7 @@ struct GridView: View {
     @Binding var gridItemState: GridItemState
     @Binding var textState: TextState
     
-    let usersText: UsersTexts
+    let usersText: PoemTexts
     
     private let numOfRectangles: [Int] = Array(1...8)
     private let adaptiveColumns = [GridItem(.adaptive(minimum: GridPoints.custom(10)))]
@@ -31,24 +31,34 @@ struct GridView: View {
                     LazyVGrid(columns: adaptiveColumns, spacing: 16) {
                         ForEach(numOfRectangles, id: \.self) { item in
                             ZStack(alignment: .bottom) {
+                                
                                 GridImage()
-                                Text(usersText.texts[safe: item - 1] ?? "")
-                                    .background(gridItemState.index == item ? Color.orange
-                                                : .clear)
-                                    .cornerRadius(8)
-                                    .foregroundStyle(gridItemState.index == item ? .white : Color.green)
-                                    .lineLimit(14)
-                                    .minimumScaleFactor(0.2)
-                                    .padding(GridPoints.x1)
-                                    .onTapGesture {
+                                
+                                if usersText.texts[safe: item - 1] == nil {
+                                    ProgressView()
+                                        .progressViewStyle(CircularProgressViewStyle())
+                                        .frame(width: GridPoints.custom(8), height: GridPoints.custom(8))
+                                } else {
+                                    
+                                    Text(usersText.texts[safe: item - 1] ?? "")
+                                        .frame(width: GridPoints.custom(8), height: GridPoints.custom(8))
+                                        .background(gridItemState.index == item ? Color.orange
+                                                    : .clear)
+                                        .cornerRadius(8)
+                                        .foregroundStyle(gridItemState.index == item ? .white : Color.green)
+                                        .lineLimit(14)
+                                        .minimumScaleFactor(0.2)
+                                        .padding(GridPoints.x1)
+                                        .onTapGesture {
                                             guard usersText.texts[safe: item - 1] != nil else { return }
-                                        withAnimation(.easeInOut(duration: 0.5)) {
-                                            viewAdapter.gridItemState = GridItemState(
-                                                index: item,
-                                                isSelected: !(gridItemState.index == item)
-                                            )
+                                            withAnimation(.easeInOut(duration: 0.5)) {
+                                                viewAdapter.gridItemState = GridItemState(
+                                                    index: item,
+                                                    isSelected: !(gridItemState.index == item)
+                                                )
+                                            }
                                         }
-                                    }
+                                }
                                 
                                 if let percentage = readPercentages[item], !percentage.isEmpty {
                                     ProcentageStack()
@@ -85,41 +95,41 @@ struct GridView: View {
                                 viewAdapter.resetReader()
                                 gridItemState.index = 0
                             }
-                        }
+                    }
                     .padding(GridPoints.half)
-                    }
-
-                } else if !gridItemState.isSelected {
-                    VStack {
-                        UserTextArea(viewAdapter: viewAdapter, isFlipped: $isFlipped, textState: $viewAdapter.textState)
-                    }
-                    .rotationEffect(.degrees(isFlipped ? 180 : 0), anchor: .center)
-                    .scaleEffect(x: isFlipped ? 1 : 1, y: -1, anchor: .center)
                 }
-                else {
-                    VStack {
-                        ScrollView {
-                            Text(textState.selectedText)
-                                .padding(GridPoints.x1)
-                                .background(.white)
-                                .cornerRadius(GridPoints.x1)
-                        }
-                        FlipBackBtn(viewAdapter: viewAdapter)
-                            .onTapGesture {
-                                let result = textState.textPercentage
-                                let selectedIndex = viewAdapter.gridItemState.index
-                                
-                                percentagesInHeight[selectedIndex] = result
-                                readPercentages[selectedIndex] = "\(result) %"
-                                viewAdapter.closeSelectedText(selectedItem: selectedIndex)
-                                withAnimation(.bouncy(duration: 1.0)) {
-                                    self.isFlipped.toggle()
-                                }
+                
+            } else if !gridItemState.isSelected {
+                VStack {
+                    UserTextArea(viewAdapter: viewAdapter, isFlipped: $isFlipped, textState: $viewAdapter.textState)
+                }
+                .rotationEffect(.degrees(isFlipped ? 180 : 0), anchor: .center)
+                .scaleEffect(x: isFlipped ? 1 : 1, y: -1, anchor: .center)
+            }
+            else {
+                VStack {
+                    ScrollView {
+                        Text(textState.selectedText)
+                            .padding(GridPoints.x1)
+                            .background(.white)
+                            .cornerRadius(GridPoints.x1)
+                    }
+                    FlipBackBtn(viewAdapter: viewAdapter)
+                        .onTapGesture {
+                            let result = textState.textPercentage
+                            let selectedIndex = viewAdapter.gridItemState.index
+                            
+                            percentagesInHeight[selectedIndex] = result
+                            readPercentages[selectedIndex] = "\(result) %"
+                            viewAdapter.closeSelectedText(selectedItem: selectedIndex)
+                            withAnimation(.bouncy(duration: 1.0)) {
+                                self.isFlipped.toggle()
                             }
-                    }
-                    .rotationEffect(.degrees(isFlipped ? 180 : 0), anchor: .center)
-                    .scaleEffect(x: isFlipped ? 1 : 1, y: -1, anchor: .center)
+                        }
                 }
+                .rotationEffect(.degrees(isFlipped ? 180 : 0), anchor: .center)
+                .scaleEffect(x: isFlipped ? 1 : 1, y: -1, anchor: .center)
+            }
         }
         .modifier(CardStyling())
         .rotation3DEffect(
@@ -139,7 +149,7 @@ struct GridView_Previews: PreviewProvider {
             isFlipped: false,
             gridItemState: .constant(gridItemState),
             textState: .constant(textState),
-            usersText: UsersTexts())
+            usersText: PoemTexts())
         .previewLayout(.sizeThatFits)
     }
 }

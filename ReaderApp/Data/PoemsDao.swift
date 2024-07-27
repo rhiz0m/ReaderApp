@@ -11,7 +11,7 @@ struct PoemsDAO {
     private let httpClient = HTTPClient()
     
     func fetchPoems(completion: @escaping (Result<[Poems], NetworkError>) -> Void) {
-        guard let url = URL.forPoemsByAuthor() else {
+        guard let url = URL.getPoetryURL() else {
             return completion(.failure(.badUrl))
         }
         

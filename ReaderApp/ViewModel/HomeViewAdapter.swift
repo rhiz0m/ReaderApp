@@ -12,8 +12,7 @@ class HomeViewAdapter: ObservableObject, CurrentIndex {
     @Published var viewModel: HomeView.ViewModel?
     @Published var poems: [Poems] = []
     @Published var repository = PoemsRepository()
-    
-    @Published var usersText: UsersTexts
+    @Published var usersText: PoemTexts
     @Published var gridItemState: GridItemState
     @Published var splitValues: SplitValues
     @Published var readerVelocity: ReaderVelocity
@@ -43,7 +42,7 @@ class HomeViewAdapter: ObservableObject, CurrentIndex {
          currentIndex: (Int, Int)? = nil) {
         
         self.viewModel = viewModel
-        self.usersText = UsersTexts()
+        self.usersText = PoemTexts()
         self.gridItemState = GridItemState(
             index: 0,
             isSelected: false)

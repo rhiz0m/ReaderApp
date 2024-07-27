@@ -58,16 +58,7 @@ struct HomeView: View {
                     .background(.white)
                     
                     BtnSection(viewAdapter: viewAdapter)
-                    
-                    VStack {
-                        List(viewAdapter.poems) { poems in
-                            Text("Poem: ")
-                            Text(poems.poemLines.joined(separator: "\n"))
-                                .foregroundStyle(.red)
-                        }
-                        .font(.caption)
-                    }
-                   
+                                
                 }
                 .bold()
                 .font(.largeTitle)
