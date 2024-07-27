@@ -33,7 +33,7 @@ struct HomeView: View {
                     viewAdapter: viewAdapter,
                     gridItemState: $viewAdapter.gridItemState,
                     textState: $viewAdapter.textState,
-                    usersText: viewAdapter.usersText)
+                    usersText: viewAdapter.poemTexts)
                 .padding(.horizontal, GridPoints.x1)
                 .padding(.top, GridPoints.x8)
                 

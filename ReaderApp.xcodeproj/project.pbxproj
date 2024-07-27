@@ -220,12 +220,11 @@
 		FE6F22E22C297A3500638FE2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FE6F233A2C2982ED00638FE2 /* Auth */,
+				FE89C1312C552B1500EC0AE3 /* Screens */,
 				FE6F231D2C297D9100638FE2 /* Components */,
 				FE6F231B2C297D5D00638FE2 /* Fonts */,
 				FE6F23142C297D1400638FE2 /* Modifiers */,
 				FE6F23112C297CFE00638FE2 /* SubViews */,
-				FE6F230F2C297CAD00638FE2 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -344,6 +343,15 @@
 				FE78F17C2C52651900B763E2 /* PoemsDao.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		FE89C1312C552B1500EC0AE3 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FE6F233A2C2982ED00638FE2 /* Auth */,
+				FE6F230F2C297CAD00638FE2 /* HomeView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		FEDDF88B2C2738030001ADD8 = {

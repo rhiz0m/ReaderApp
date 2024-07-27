@@ -12,7 +12,7 @@ class HomeViewAdapter: ObservableObject, CurrentIndex {
     @Published var viewModel: HomeView.ViewModel?
     @Published var poems: [Poems] = []
     @Published var repository = PoemsRepository()
-    @Published var usersText: PoemTexts
+    @Published var poemTexts: PoemTexts
     @Published var gridItemState: GridItemState
     @Published var splitValues: SplitValues
     @Published var readerVelocity: ReaderVelocity
@@ -42,7 +42,7 @@ class HomeViewAdapter: ObservableObject, CurrentIndex {
          currentIndex: (Int, Int)? = nil) {
         
         self.viewModel = viewModel
-        self.usersText = PoemTexts()
+        self.poemTexts = PoemTexts()
         self.gridItemState = GridItemState(
             index: 0,
             isSelected: false)
@@ -125,7 +125,7 @@ class HomeViewAdapter: ObservableObject, CurrentIndex {
     }
     
     func showSelectedText(selectedIndex: Int) {
-        guard let selectedText = usersText.texts[safe: selectedIndex - 1] else {
+        guard let selectedText = poemTexts.texts[safe: selectedIndex - 1] else {
             return
         }
         textState.selectedText = selectedText

@@ -127,8 +127,7 @@ struct GridView: View {
                             }
                         }
                 }
-                .rotationEffect(.degrees(isFlipped ? 180 : 0), anchor: .center)
-                .scaleEffect(x: isFlipped ? 1 : 1, y: -1, anchor: .center)
+                .scaleEffect(x: isFlipped ? -1 : 1, y: 1, anchor: .center)
             }
         }
         .modifier(CardStyling())
